@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title bind="title">Perdido</title>
+    <meta http-equiv="Content-Type"
+          content="text/html; charset=UTF-8">
+    <meta name="HandheldFriendly" content="true">
+    <meta name="MobileOptimized" content="640">
+    <meta name="viewport" content="width=device-width">
+    <link rel="shortcut icon"
+          type="image/x-icon"
+          href="/favicon.ico">
+    <style type="text/css" media="screen">
+      #logo {
+        display: block;
+        height: 320px;
+        margin: 0 auto;
+      }
+      #text {
+        margin: 0 auto;
+        max-width: 360px;
+        opacity: 0.7;
+        text-align: center;
+      }
+      #text:hover { opacity: 1 }
+      @media (max-width: 640px) {
+        #text-detail { display: none }
+      }
+      body {
+        font-family: 'PT Sans', Roboto, 'Droid Sans', Helvetica, Arial, sans-serif;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="content">
+      <img src="/imgs/nubenautas.svg" id="logo" alt="NN">
+      <div id="text" class="highlight">
+        <h1>No encontrado</h1>
+        <p id="text-detail">Si crees que es un error, por favor repórtalo.</p>
+        <p><a href="https://nubenautas.com/">Sitio Web</a> - <a href="https://admin.nubenautas.com/">Panel de Administración</a></p>
+      </div>
+    </div>
+  </body>
+</html>

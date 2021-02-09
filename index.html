@@ -1,0 +1,838 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="uft-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+    <title bind="title">Nubenautas</title>
+    <link rel="icon" href="/img/nubenautas.svg">
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css">
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@mdi/font@5.8.55/css/materialdesignicons.min.css">
+		<style>
+			.navbar-item img { max-height: 4em }
+			body.has-navbar-fixed-top { padding-top: 5rem }
+		</style>
+  </head>
+  <body class="has-navbar-fixed-top">
+		<nav class="navbar is-fixed-top" role="navigation" aria-label="main navigation">
+			<div class="navbar-brand">
+				<a class="navbar-item" href="#landing"><img src="/img/nubenautas.svg"></a>
+				<a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navMenu">
+					<span aria-hidden="true"></span>
+					<span aria-hidden="true"></span>
+					<span aria-hidden="true"></span>
+				</a>
+			</div>
+			<div id="navMenu" class="navbar-menu">
+				<div class="navbar-start">
+					<a class="navbar-item" href="#dominios">Dominios</a>
+					<a class="navbar-item" href="#dns">Anycast DNS</a>
+					<a class="navbar-item" href="#ssl">Certificados SSL</a>
+					<a class="navbar-item" href="#google">Google Workspace</a>
+					<a class="navbar-item" href="#wordpress">WordPress</a>
+					<a class="navbar-item" href="#hosting-compartido">Hosting Compartido</a>
+					<a class="navbar-item" href="#servidores-virtuales">Servidores Virtuales</a>
+					<a class="navbar-item" href="#desarrollo">Desarrollo Web</a>
+				</div>
+				<div class="navbar-end">
+					<div class="navbar-item">
+						<div class="buttons">
+							<a class="button is-primary" href="https://admin.nubenautas.com/registro">
+								<strong>Registro</strong>
+							</a>
+							<a class="button is-light" href="https://admin.nubenautas.com/">
+								Ingreso
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</nav>
+		<!-- Landing -->
+		<section id="landing" class="hero is-info is-medium">
+			<div class="hero-body has-text-centered">
+				<p class="title">Nubenautas</p>
+				<p class="subtitle">Tus guías en la nube</p>
+				<p>Servicios de alta disponibilidad y rendimiento, con precios simples y fácil manejo.</p>
+			</div>
+		</section>
+    <div class="container is-fullhd">
+			<div class="columns">
+				<div class="column is-half">
+					<div class="card">
+						<div class="card-content">
+							<div class="media">
+								<div class="media-left">
+									<figure class="image is-48x48">
+										<a href="#dominios" class="mdi mdi-earth card-mdi"></a>
+									</figure>
+								</div>
+								<div class="media-content">
+									<p class="title"><a href="#dominios">Dominios</a></p>
+								</div>
+							</div>
+							<div class="content">
+								Encontrarás un dominio para tu proyecto, soportamos +1,000 TLDs<br>
+								(terminaciones) de activación inmediata con DNS Gratuito.
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="column is-half">
+					<div class="media-left">
+						<a href="#dns" class="mdi mdi-web card-mdi"></a>
+					</div>
+					<div class="media-body">
+						<h3 class="media-heading"><a href="#dns">Anycast DNS</a></h3>
+						DNS redundante, geográficamente distribuido en 5 zonas distintas,<br>
+						con más de 40 nodos para servicios de alta disponibilidad.
+					</div>
+				</div>
+			</div>
+			<div class="columns">
+				<div class="column is-half">
+					<div class="media-left">
+						<a href="#ssl" class="mdi mdi-lock card-mdi"></a>
+					</div>
+					<div class="media-body">
+						<h3 class="media-heading"><a href="#ssl">Certificados SSL</a></h3>
+						Llaves de 2048 bits con cifrado de 128/256 bits,<br>
+						para uno o múltiples subdominios.
+					</div>
+				</div>
+				<div class="column is-half">
+					<div class="media-left">
+						<a href="#google" class="mdi mdi-google card-mdi"></a>
+					</div>
+					<div class="media-body">
+						<h3 class="media-heading"><a href="#google">Google Workspace</a></h3>
+						La plataforma de comunicación y colaboración más completa.<br>
+						Correo, videoconferencia, calendario, contactos, almacenamiento...
+					</div>
+				</div>
+			</div>
+			<div class="columns">
+				<div class="column is-half">
+					<div class="media-left">
+						<a href="#wordpress" class="mdi mdi-wordpress card-mdi"></a>
+					</div>
+					<div class="media-body">
+						<h3 class="media-heading"><a href="#wordpress">WordPress</a></h3>
+						Servicio especializado para sitios de WordPress,<br>
+						con acceso de administrador y certificado SSL.
+					</div>
+				</div>
+				<div class="column is-half">
+					<div class="media-left">
+						<a href="#hosting-compartido" class="mdi mdi-weather-fog card-mdi"></a>
+					</div>
+					<div class="media-body">
+						<h3 class="media-heading"><a href="#hosting-compartido">Hosting Compartido</a></h3>
+						Cuentas de hosting compartido sobre servidores virtuales en Linux<br>
+						CentOS con cPanel y SSL, Firewall, Antivirus, sin sobreventa.
+					</div>
+				</div>
+			</div>
+			<div class="columns">
+				<div class="column is-half">
+					<div class="media-left">
+						<a href="#servidores-virtuales" class="mdi mdi-buffer card-mdi"></a>
+					</div>
+					<div class="media-body">
+						<h3 class="media-heading"><a href="#servidores-virtuales">Servidores Virtuales (VPS)</a></h3>
+						Rendimiento, control, estabilidad, mantenimiento y reespaldo.<br>
+						Licencia de WHM/cPanel o Windows incluída.
+					</div>
+				</div>
+				<div class="column is-half">
+					<div class="media-left">
+						<a href="#" class="mdi mdi-television-guide card-mdi"></a>
+					</div>
+					<div class="media-body">
+						<h3 class="media-heading"><a href="#">Servicios Administrados</a></h3>
+						Nos podemos hacer cargo de tus sitios y aplicaciones,<br>
+						desde la infraestructura hasta su diseño y contenido.
+					</div>
+				</div>
+			</div>
+			<div class="columns">
+				<div class="column is-half">
+					<div class="media-left">
+						<a href="#" class="mdi mdi-code-json card-mdi"></a>
+					</div>
+					<div class="media-body">
+						<h3 class="media-heading"><a href="#">Desarrollo</a></h3>
+						Desarrollamos plataformas web y servicios especializados.
+					</div>
+				</div>
+				<div class="column is-half">
+					<div class="media-left">
+						<a href="#" class="mdi mdi-clock card-mdi"></a>
+					</div>
+					<div class="media-body">
+						<h3 class="media-heading"><a href="#">Acuerdo de nivel de servicio real (SLA)</a></h3>
+						Cualquier interrupción de servicio, incluso mantenimientos<br>
+						programados, cuentan contra nuestra garantía.
+					</div>
+				</div>
+			</div>
+    </div>
+		<!-- Dominios -->
+    <div id="dominios" class="container is-fullhd">
+			<div class="jumbotron text-center">
+				<div id="header">
+					<i class="mdi mdi-earth head-mdi"></i>
+					<h1 class="head-title">Dominios</h1>
+					<p>Contamos con casi <b>2 mil</b> terminaciones distintas (TLDs).<br>
+					Seguramente encontrarás un buen nombre para tu proyecto.</p>
+				</div>
+			</div>
+			<hr>
+			<div id="domains-data">
+				<div class="col-md-12">
+					<h3>Simplicidad, tranquilidad, control.</h3>
+					<h4>¿Dominios en distintos proveedores?</h4>
+					<h4>Retoma el control, gestiona tus Dominios, DNS, Hosting, VPS, Correo, SSL, desde el mismo lugar.</h4>
+					<h4>Estos son algunas de las terminaciones más populares entre nuestros clientes:</h4>
+				</div>
+				<br><br>
+				<table id="completa" class="table table-striped table-condensed table-hover text-right">
+					<thead>
+						<tr>
+							<th class="text-right">Terminación (TLD)</th>
+							<th class="text-right">Registro</th>
+							<th class="text-right">Transferencia</th>
+							<th class="text-right">Renovación</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>.com</td>
+							<td>$10.53</td>
+							<td>$10.53</td>
+							<td>$10.53</td>
+						</tr><tr>
+							<td>.com.mx</td>
+							<td>$12.00</td>
+							<td>$21.00</td>
+							<td>$21.00</td>
+						</tr><tr>
+							<td>.mx</td>
+							<td>$33.80</td>
+							<td>$33.80</td>
+							<td>$33.80</td>
+						</tr><tr>
+							<td>.org</td>
+							<td>$11.69</td>
+							<td>$13.16</td>
+							<td>$13.16</td>
+						</tr><tr>
+							<td>.net</td>
+							<td>$12.00</td>
+							<td>$12.00</td>
+							<td>$12.00</td>
+						</tr><tr>
+							<td>.org.mx</td>
+							<td>$12.00</td>
+							<td>$21.50</td>
+							<td>$21.50</td>
+						</tr><tr>
+							<td>.cr</td>
+							<td>$163.00</td>
+							<td>$163.00</td>
+							<td>$163.00</td>
+						</tr><tr>
+							<td>.cc</td>
+							<td>$10.00</td>
+							<td>$10.00</td>
+							<td>$10.00</td>
+						</tr><tr>
+							<td>.io</td>
+							<td>$48.75</td>
+							<td>$48.75</td>
+							<td>$48.75</td>
+						</tr><tr>
+							<td>.com.es</td>
+							<td>$4.09</td>
+							<td>$2.50</td>
+							<td>$4.09</td>
+						</tr><tr>
+							<td>.com.sv</td>
+							<td>$167.00</td>
+							<td>$167.00</td>
+							<td>$167.00</td>
+						</tr><tr>
+							<td>.lat</td>
+							<td>$24.00</td>
+							<td>$24.00</td>
+							<td>$24.00</td>
+						</tr><tr>
+							<td>.biz</td>
+							<td>$16.67</td>
+							<td>$16.67</td>
+							<td>$16.67</td>
+						</tr><tr>
+							<td>.co.cr</td>
+							<td>$68.50</td>
+							<td>$68.50</td>
+							<td>$68.50</td>
+						</tr><tr>
+							<td>.com.ar</td>
+							<td>$92.00</td>
+							<td>$92.00</td>
+							<td>$92.00</td>
+						</tr><tr>
+							<td>.me</td>
+							<td>$8.67</td>
+							<td>$17.65</td>
+							<td>$17.65</td>
+						</tr><tr>
+							<td>.ninja</td>
+							<td>$7.68</td>
+							<td>$17.13</td>
+							<td>$17.13</td>
+						</tr><tr>
+							<td>.se</td>
+							<td>$17.43</td>
+							<td>$2.50</td>
+							<td>$17.43</td>
+						</tr><tr>
+							<td>.solutions</td>
+							<td>$5.18</td>
+							<td>$18.43</td>
+							<td>$18.43</td>
+						</tr><tr>
+							<td>.tech</td>
+							<td>$42.00</td>
+							<td>$42.00</td>
+							<td>$42.00</td>
+						</tr><tr>
+							<td>.app</td>
+							<td>$14.00</td>
+							<td>$14.00</td>
+							<td>$14.00</td>
+						</tr><tr>
+							<td>.art</td>
+							<td>$11.93</td>
+							<td>$11.93</td>
+							<td>$11.93</td>
+						</tr><tr>
+							<td>.blog</td>
+							<td>$7.68</td>
+							<td>$26.23</td>
+							<td>$26.23</td>
+						</tr><tr>
+							<td>.ca</td>
+							<td>$20.40</td>
+							<td>$20.40</td>
+							<td>$20.40</td>
+						</tr><tr>
+							<td>.cafe</td>
+							<td>$10.18</td>
+							<td>$28.18</td>
+							<td>$28.18</td>
+						</tr><tr>
+							<td>.capital</td>
+							<td>$10.18</td>
+							<td>$46.38</td>
+							<td>$46.38</td>
+						</tr><tr>
+							<td>.digital</td>
+							<td>$4.68</td>
+							<td>$28.18</td>
+							<td>$28.18</td>
+						</tr><tr>
+							<td>.es</td>
+							<td>$7.55</td>
+							<td>$2.50</td>
+							<td>$7.55</td>
+						</tr><tr>
+							<td>.events</td>
+							<td>$10.18</td>
+							<td>$28.18</td>
+							<td>$28.18</td>
+						</tr><tr>
+							<td>.games</td>
+							<td>$16.00</td>
+							<td>$16.00</td>
+							<td>$16.00</td>
+						</tr><tr>
+							<td>.global</td>
+							<td>$65.23</td>
+							<td>$65.23</td>
+							<td>$65.23</td>
+						</tr><tr>
+							<td>.group</td>
+							<td>$11.28</td>
+							<td>$11.28</td>
+							<td>$11.28</td>
+						</tr><tr>
+							<td>.help</td>
+							<td>$26.23</td>
+							<td>$26.23</td>
+							<td>$26.23</td>
+						</tr><tr>
+							<td>.im</td>
+							<td>$49.49</td>
+							<td>$2.50</td>
+							<td>$49.49</td>
+						</tr><tr>
+							<td>.ink</td>
+							<td>$12.00</td>
+							<td>$23.00</td>
+							<td>$23.00</td>
+						</tr><tr>
+							<td>.lc</td>
+							<td>$21.00</td>
+							<td>$21.00</td>
+							<td>$21.00</td>
+						</tr><tr>
+							<td>.life</td>
+							<td>$4.68</td>
+							<td>$27.53</td>
+							<td>$27.53</td>
+						</tr><tr>
+							<td>.no</td>
+							<td>$28.81</td>
+							<td>$2.50</td>
+							<td>$28.81</td>
+						</tr><tr>
+							<td>.online</td>
+							<td>$30.00</td>
+							<td>$30.00</td>
+							<td>$30.00</td>
+						</tr><tr>
+							<td>.pro</td>
+							<td>$6.18</td>
+							<td>$17.33</td>
+							<td>$17.33</td>
+						</tr><tr>
+							<td>.site</td>
+							<td>$24.00</td>
+							<td>$24.00</td>
+							<td>$24.00</td>
+						</tr><tr>
+							<td>.solar</td>
+							<td>$43.00</td>
+							<td>$43.00</td>
+							<td>$43.00</td>
+						</tr><tr>
+							<td>.studio</td>
+							<td>$19.00</td>
+							<td>$19.00</td>
+							<td>$19.00</td>
+						</tr><tr>
+							<td>.support</td>
+							<td>$6.68</td>
+							<td>$18.43</td>
+							<td>$18.43</td>
+						</tr><tr>
+							<td>.tc</td>
+							<td>$158.85</td>
+							<td>$295.22</td>
+							<td>$158.85</td>
+						</tr><tr>
+							<td>.travel</td>
+							<td>$130.00</td>
+							<td>$130.00</td>
+							<td>$130.00</td>
+						</tr><tr>
+							<td>.us</td>
+							<td>$8.50</td>
+							<td>$8.50</td>
+							<td>$8.50</td>
+						</tr><tr>
+							<td>.vision</td>
+							<td>$26.00</td>
+							<td>$26.00</td>
+							<td>$26.00</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+		<!-- DNS -->
+		<div id="dns" class="container is-fullhd">
+			<div class="jumbotron text-center">
+				<div>
+					<i class="mdi mdi-web head-mdi"></i>
+					<h1 class="head-title">Anycast DNS</h1>
+					<p>Todos los servicios asociados a un dominio dependen del servicio de DNS,
+					por eso en Nubenautas ofrecemos un servicio profesional de DNS de alta disponibilidad, redundante, distribuido geográficamente.</p>
+				</div>
+			</div>
+			<div class="columns">
+				<div class="column is-three-quarters">
+				Anycast es una tecnología de enrutamiento en la que los paquetes de información son encaminados al mejor destino desde el punto de vista de latencia (nodo más cercano o con menor latencia), para lograr ésto una dirección IP se anuncia desde varios puntos diferentes geográficamente distribuídos, y como los routers en internet siempre estan optimizando sus rutas, escogerán la más cercana para quien realiza la petición.<br>
+				Ésto se traduce en mayor eficiencia en resolución y la menor latencia posible en cualquier petición, desde cualquier punto del mundo. Al mismo tiempo significa alta disponibilidad, ya que detrás de las 4 IPs de los DNS, hay más de 40 nodos distribuídos en todo el mundo, si cualquiera de ellos presenta una interrupción de servicio, se elimina de la tabla de ruteo y los demás se distribuyen la carga.<br><br>
+				Al ser un servicio basado en protocolo UDP sin estado, y siendo el servicio de DNS una dependencia para cualquier servicio ligado a un dominio, los ataques de denegación se servicio son cada vez más frecuentes y de mayor escala, por ello todos nuestros puntos de presencia cuentan con múltiples capas de defensa contra ataques de denegación de servicio (DDoS).
+				</div>
+				<div class="column is-one-quarter">
+					<div class="text-center bg-info">
+						<h3 class="bg-primary">$12 USD anuales</h3>
+							<h4>Registros ilimitados</h4>
+							<h4>Peticiones ilimitadas</h4>
+							<h4>Registros</h4>
+							<div>
+								<h5>A</h5>
+								<h5>MX</h5>
+								<h5>TXT</h5>
+								<h5>CNAME</h5>
+								<h5>AAAA</h5>
+								<h5>PTR</h5>
+								<h5>SRV</h5>
+								<h5 title="Redirecciones estilo CNAME con registros A">+ALIAS</h5>
+								<h5 title="Redirecciones a URLs completas registros A">+URL</h5>
+							</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- SSL -->
+		<div id="ssl" class="container is-fullhd">
+			<div class="jumbotron text-center">
+				<div>
+					<i class="mdi mdi-lock head-mdi"></i>
+					<h1 class="head-title">Certificados SSL</h1>
+					<p>De fácil generación, para subdominio único y comodín.</p>
+				</div>
+			</div>
+			<div class="columns">
+				<div class="col-md-2">
+					<div class="text-center bg-info">
+						<h2>Único</h2>
+						<h3 class="bg-primary">$50 USD anuales</h3>
+							<h4>Certifica un subdominio</h4>
+					</div>
+				</div>
+				<div class="column is-one-third">
+					Los certificados de subdomino único se utilizan para una dirección específica, ejemplo: sistema.dominio.com<br><br>
+					Con la particularidad de que los certificados emitidos para el dominio raíz, dominio.com también incluye al subdominio www.<br><br>
+					En Nubenautas realizamos la generación de CSR (Certificate Signing Request) por tí para facilitar el proceso y poder obtener el certificado con sólo validar un correo.
+				</div>
+				<div class="column is-one-third">
+					Los certificados de subdominio comodín avalan a cualquier subdominio, e incluye el dominio raíz, es decir *.dominio.com<br><br>
+				</div>
+				<div class="col-md-2">
+					<div class="text-center bg-info">
+						<h2>Comodín</h2>
+						<h3 class="bg-primary">$150 USD anuales</h3>
+							<h4>Certifica todos los subdominios</h4>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- WordPress -->
+		<div id="wordpress" class="container is-fullhd">
+			<div class="jumbotron text-center">
+				<div>
+					<i class="mdi mdi-wordpress head-mdi"></i>
+					<h1 class="head-title">WordPress</h1>
+					<p>Servicio especializado para hospedar sitios de WordPress, sin acceso a cPanel.</p>
+				</div>
+			</div>
+			<section id="pricing-larger-plans" class="primary extra-space-bottom">
+				<div class="container is-fullhd">
+					<div class="row pricing-view">
+						<div class="col-sm-12 reduce-gutter">
+							<div class="table-responsive">
+								<table id="pricing-larger-plans-table" class="table table-pricing table-striped pricing-plans-table text-center">
+									<thead>
+										<tr>
+											<th></th>
+											<th class="text-center">Almacenamiento</th>
+											<th class="text-center">Precio [USD]</th>
+										</tr>
+									</thead>
+									<tbody>
+											<tr>
+												<td><strong>Wordpress</strong></td>
+												<td>5 GB</td>
+												<td class="price"><strong>$5 / mes </strong>($55 / año)</td>
+											</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+		</div>
+		<!-- Hosting -->
+		<div id="hosting-compartido" class="container is-fullhd">
+			<div class="jumbotron text-center">
+				<div>
+					<i class="mdi mdi-weather-fog head-mdi"></i>
+					<h1 class="head-title">Web Hosting Compartido</h1>
+					<h2>Tu sitio a tu manera</h2>
+					<p>Servicio sobre la plataforma de cPanel, sin sobreventa.</p>
+				</div>
+			</div>
+			<section id="pricing-larger-plans" class="primary extra-space-bottom">
+				<div class="container is-fullhd">
+					<div class="row pricing-view">
+						<div class="col-sm-12 reduce-gutter">
+							<div class="table-responsive">
+								<table id="pricing-larger-plans-table" class="table table-pricing table-striped pricing-plans-table text-center">
+									<thead>
+										<tr>
+											<th></th>
+											<th class="text-center">Sitios</th>
+											<th class="text-center">Almacenamiento</th>
+											<th class="text-center">Precio [USD]</th>
+										</tr>
+									</thead>
+									<tbody>
+											<tr>
+												<td>Plan <strong>1</strong></td>
+												<td>1</td>
+												<td>10 GB</td>
+												<td class="price"><strong>$9 / mes </strong>($99 / año)</td>
+											</tr>
+											<tr>
+												<td>Plan <strong>2</strong></td>
+												<td>2</td>
+												<td>20 GB</td>
+												<td class="price"><strong>$18 / mes </strong>($198 / año)</td>
+											</tr>
+											<tr>
+												<td>Plan <strong>3</strong></td>
+												<td>3</td>
+												<td>30 GB</td>
+												<td class="price"><strong>$27 / mes </strong>($297 / año)</td>
+											</tr>
+											<tr>
+												<td>Plan <strong>4</strong></td>
+												<td>4</td>
+												<td>40 GB</td>
+												<td class="price"><strong>$36 / mes </strong>($396 / año)</td>
+											</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+		</div>
+		<!-- VPS -->
+		<div id="servidores-virtuales" class="container is-fullhd">
+			<div class="jumbotron text-center">
+				<div>
+					<i class="mdi mdi-buffer head-mdi"></i>
+					<h1 class="head-title">Servidores Virtuales (VPS)</h1>
+					<h2>Sin calculadora</h2>
+					<p>
+						Recursos empaquetados en un esquema simple, respaldos diarios,<br>
+						asesoría en su administración y buenas prácticas de seguridad.<br>
+						Licencia de cPanel para Linux CentOS<br>
+						Licencia de Windows Server 2016 x64
+					</p>
+				</div>
+			</div>
+			<section id="pricing-larger-plans" class="primary extra-space-bottom">
+				<div class="container is-fullhd">
+					<div class="row pricing-view">
+						<div class="col-sm-12 reduce-gutter">
+							<div class="table-responsive">
+								<table id="pricing-larger-plans-table" class="table table-pricing table-striped pricing-plans-table text-center">
+									<thead>
+										<tr>
+											<th></th>
+											<th class="text-center">RAM</th>
+											<th class="text-center">CPU</th>
+											<th class="text-center">Almacenamiento</th>
+											<th class="text-center">Transferencia</th>
+											<th class="text-center">Descarga</th>
+											<th class="text-center">Subida</th>
+											<th class="text-center">Precio [USD]</th>
+										</tr>
+									</thead>
+									<tbody>
+											<tr>
+												<td>VPS <strong>1</strong></td>
+												<td>2 GB</td>
+												<td>1 Núcleo</td>
+												<td>50 GB SSD</td>
+												<td>2 TB</td>
+												<td>40 Gbps</td>
+												<td>1 Gbps</td>
+												<td class="price"><strong>$55 / mes </strong>($605 / año)</td>
+											</tr>
+											<tr>
+												<td>VPS <strong>2</strong></td>
+												<td>4 GB</td>
+												<td>2 Núcleos</td>
+												<td>80 GB SSD</td>
+												<td>4 TB</td>
+												<td>40 Gbps</td>
+												<td>1 Gbps</td>
+												<td class="price"><strong>$80 / mes </strong>($880 / año)</td>
+											</tr>
+											<tr>
+												<td>VPS <strong>3</strong></td>
+												<td>8 GB</td>
+												<td>4 Núcleos</td>
+												<td>160 GB SSD</td>
+												<td>5 TB</td>
+												<td>40 Gbps</td>
+												<td>1 Gbps</td>
+												<td class="price"><strong>$130 / mes </strong>($1,430 / año)</td>
+											</tr>
+											<tr>
+												<td>VPS <strong>4</strong></td>
+												<td>16 GB</td>
+												<td>6 Núcleos</td>
+												<td>320 GB SSD</td>
+												<td>8 TB</td>
+												<td>40 Gbps</td>
+												<td>1 Gbps</td>
+												<td class="price"><strong>$230 / mes </strong>($2,530 / año)</td>
+											</tr>
+											<tr>
+												<td>VPS <strong>5</strong></td>
+												<td>32 GB</td>
+												<td>8 Núcleos</td>
+												<td>640 GB SSD</td>
+												<td>16 TB</td>
+												<td>40 Gbps</td>
+												<td>2 Gbps</td>
+												<td class="price"><strong>$430 / mes </strong>($4,730 / año)</td>
+											</tr>
+											<tr>
+												<td>VPS <strong>6</strong></td>
+												<td>64 GB</td>
+												<td>16 Núcleos</td>
+												<td>1280 GB SSD</td>
+												<td>20 TB</td>
+												<td>40 Gbps</td>
+												<td>4 Gbps</td>
+												<td class="price"><strong>$830 / mes </strong>($9,130 / año)</td>
+											</tr>
+											<tr>
+												<td>VPS <strong>7</strong></td>
+												<td>96 GB</td>
+												<td>20 Núcleos</td>
+												<td>1920 GB SSD</td>
+												<td>20 TB</td>
+												<td>40 Gbps</td>
+												<td>6 Gbps</td>
+												<td class="price"><strong>$1,230 / mes </strong>($13,530 / año)</td>
+											</tr>
+											<tr>
+												<td>VPS <strong>8</strong></td>
+												<td>128 GB</td>
+												<td>24 Núcleos</td>
+												<td>2560 GB SSD</td>
+												<td>20 TB</td>
+												<td>40 Gbps</td>
+												<td>8 Gbps</td>
+												<td class="price"><strong>$1,630 / mes </strong>($17,930 / año)</td>
+											</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+		</div>
+		<!-- Google -->
+		<div id="google" class="container is-fullhd">
+			<div class="jumbotron text-center">
+				<div>
+					<i class="mdi mdi-google head-mdi"></i>
+					<h1 class="head-title">Google Workspace</h1>
+					<p>Correo, calendarios, documentos, almacenamiento, videoconferencia.</p>
+				</div>
+			</div>
+			<div class="columns">
+				<div class="column is-half">
+					<div class="media-left">
+						<i class="mdi mdi-gmail card-mdi"></i>
+					</div>
+					<div class="media-body">
+						<h3 class="media-heading">Correo Gmail</h3>
+						Servicio profesional con tu dominio, sin anuncios, asistencia las 24 horas y aplicaciones nativas para dispositivos móviles.
+					</div>
+				</div>
+				<div class="column is-half">
+					<div class="media-left">
+						<i class="mdi mdi-google-drive card-mdi"></i>
+					</div>
+					<div class="media-body">
+						<h3 class="media-heading">Google Drive</h3>
+						Espacio para almacenar y compartir archivos, con clientes para sincronización con carpetas locales.
+					</div>
+				</div>
+			</div>
+			<div class="columns">
+				<div class="column is-half">
+					<div class="media-left">
+						<i class="mdi mdi-calendar card-mdi"></i>
+					</div>
+					<div class="media-body">
+						<h3 class="media-heading">Google Calendar</h3>
+						Organización de citas con integración a videoconferencias, ubicaciones en Google Maps, eventos recurrentes, etc.
+					</div>
+				</div>
+				<div class="column is-half">
+					<div class="media-left">
+						<i class="mdi mdi-file-document card-mdi"></i>
+					</div>
+					<div class="media-body">
+						<h3 class="media-heading">Google Docs</h3>
+						Colaboración en tiempo real sobre documentos, siempre guardados, sin ocupar espacio en Google Drive.
+					</div>
+				</div>
+			</div>
+			<div class="columns">
+				<div class="column is-half">
+					<div class="media-left">
+						<i class="mdi mdi-message-video card-mdi"></i>
+					</div>
+					<div class="media-body">
+						<h3 class="media-heading">Chats y Meetings</h3>
+						Plataformas de comunicación, chat, presentación y videoconferencia para grupos de trabajo.
+					</div>
+				</div>
+				<div class="column is-half">
+					<div class="media-left">
+						<i class="mdi mdi-cellphone-lock card-mdi"></i>
+					</div>
+					<div class="media-body">
+						<h3 class="media-heading">Seguridad</h3>
+						Administración de dispositivos móviles, auditoría y respaldos.
+					</div>
+				</div>
+			</div>
+		</div>
+		<script>
+			document.addEventListener('DOMContentLoaded', () => {
+
+			// Get all "navbar-burger" elements
+			const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
+
+			// Check if there are any navbar burgers
+			if ($navbarBurgers.length > 0) {
+
+				// Add a click event on each of them
+				$navbarBurgers.forEach( el => {
+					el.addEventListener('click', () => {
+
+						// Get the target from the "data-target" attribute
+						const target = el.dataset.target;
+						const $target = document.getElementById(target);
+
+						// Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
+						el.classList.toggle('is-active');
+						$target.classList.toggle('is-active');
+
+					});
+				});
+			}
+
+			});
+		</script>
+  </body>
+</html>
+
