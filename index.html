@@ -6,14 +6,13 @@
     <title bind="title">Nubenautas</title>
     <link rel="icon" href="/img/nubenautas.svg">
 		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css">
-		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@mdi/font@5.8.55/css/materialdesignicons.min.css">
 		<style>
 			.navbar-item img { max-height: 4em }
 			body.has-navbar-fixed-top { padding-top: 5rem }
 		</style>
   </head>
   <body class="has-navbar-fixed-top">
-		<nav class="navbar is-fixed-top" role="navigation" aria-label="main navigation">
+		<nav class="navbar is-fixed-top is-dark" role="navigation" aria-label="main navigation">
 			<div class="navbar-brand">
 				<a class="navbar-item" href="#landing"><img src="/img/nubenautas.svg"></a>
 				<a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navMenu">
@@ -51,7 +50,7 @@
 		<section id="landing" class="hero is-info is-medium">
 			<div class="hero-body has-text-centered">
 				<p class="title">Nubenautas</p>
-				<p class="subtitle">Tus guías en la nube</p>
+				<p class="subtitle">Tus guías en la nube, con más de 7 años y 200 clientes</p>
 				<p>Servicios de alta disponibilidad y rendimiento, con precios simples y fácil manejo.</p>
 			</div>
 		</section>
@@ -63,115 +62,205 @@
 							<div class="media">
 								<div class="media-left">
 									<figure class="image is-48x48">
-										<a href="#dominios" class="mdi mdi-earth card-mdi"></a>
+										<a href="#dominios"><img src="/img/domains.svg"></a>
 									</figure>
 								</div>
 								<div class="media-content">
-									<p class="title"><a href="#dominios">Dominios</a></p>
+									<p class="title"><a href="#dominios">Registro de Dominios</a></p>
 								</div>
 							</div>
 							<div class="content">
-								Encontrarás un dominio para tu proyecto, soportamos +1,000 TLDs<br>
-								(terminaciones) de activación inmediata con DNS Gratuito.
+								Encontrarás un dominio para tu proyecto, soportamos casi 2 mil terminaciones (TLDs)<br>
+								de activación inmediata, con DNS gratuito y protección de datos de contacto (WHOIS).
 							</div>
 						</div>
 					</div>
 				</div>
 				<div class="column is-half">
-					<div class="media-left">
-						<a href="#dns" class="mdi mdi-web card-mdi"></a>
-					</div>
-					<div class="media-body">
-						<h3 class="media-heading"><a href="#dns">Anycast DNS</a></h3>
-						DNS redundante, geográficamente distribuido en 5 zonas distintas,<br>
-						con más de 40 nodos para servicios de alta disponibilidad.
-					</div>
-				</div>
-			</div>
-			<div class="columns">
-				<div class="column is-half">
-					<div class="media-left">
-						<a href="#ssl" class="mdi mdi-lock card-mdi"></a>
-					</div>
-					<div class="media-body">
-						<h3 class="media-heading"><a href="#ssl">Certificados SSL</a></h3>
-						Llaves de 2048 bits con cifrado de 128/256 bits,<br>
-						para uno o múltiples subdominios.
-					</div>
-				</div>
-				<div class="column is-half">
-					<div class="media-left">
-						<a href="#google" class="mdi mdi-google card-mdi"></a>
-					</div>
-					<div class="media-body">
-						<h3 class="media-heading"><a href="#google">Google Workspace</a></h3>
-						La plataforma de comunicación y colaboración más completa.<br>
-						Correo, videoconferencia, calendario, contactos, almacenamiento...
+					<div class="card">
+						<div class="card-content">
+							<div class="media">
+								<div class="media-left">
+									<figure class="image is-48x48">
+										<a href="#dns"><img src="/img/dns.svg"></a>
+									</figure>
+								</div>
+								<div class="media-content">
+									<p class="title"><a href="#dns">Anycast DNS</a></p>
+								</div>
+							</div>
+							<div class="content">
+								Anycast DNS, servicio redundante, geográficamente distribuido en 5 zonas distintas,<br>
+								con más de 40 nodos para servicios de alta disponibilidad con DNSimple.
+							</div>
+						</div>
 					</div>
 				</div>
 			</div>
 			<div class="columns">
 				<div class="column is-half">
-					<div class="media-left">
-						<a href="#wordpress" class="mdi mdi-wordpress card-mdi"></a>
-					</div>
-					<div class="media-body">
-						<h3 class="media-heading"><a href="#wordpress">WordPress</a></h3>
-						Servicio especializado para sitios de WordPress,<br>
-						con acceso de administrador y certificado SSL.
-					</div>
-				</div>
-				<div class="column is-half">
-					<div class="media-left">
-						<a href="#hosting-compartido" class="mdi mdi-weather-fog card-mdi"></a>
-					</div>
-					<div class="media-body">
-						<h3 class="media-heading"><a href="#hosting-compartido">Hosting Compartido</a></h3>
-						Cuentas de hosting compartido sobre servidores virtuales en Linux<br>
-						CentOS con cPanel y SSL, Firewall, Antivirus, sin sobreventa.
-					</div>
-				</div>
-			</div>
-			<div class="columns">
-				<div class="column is-half">
-					<div class="media-left">
-						<a href="#servidores-virtuales" class="mdi mdi-buffer card-mdi"></a>
-					</div>
-					<div class="media-body">
-						<h3 class="media-heading"><a href="#servidores-virtuales">Servidores Virtuales (VPS)</a></h3>
-						Rendimiento, control, estabilidad, mantenimiento y reespaldo.<br>
-						Licencia de WHM/cPanel o Windows incluída.
+					<div class="card">
+						<div class="card-content">
+							<div class="media">
+								<div class="media-left">
+									<figure class="image is-48x48">
+										<a href="#ssl"><img src="/img/ssl.svg"></a>
+									</figure>
+								</div>
+								<div class="media-content">
+									<p class="title"><a href="#ssl">Certificados SSL</a></p>
+								</div>
+							</div>
+							<div class="content">
+								Llaves de 2048 bits con cifrado de 128/256 bits,<br>
+								para uno o múltiples subdominios.
+							</div>
+						</div>
 					</div>
 				</div>
 				<div class="column is-half">
-					<div class="media-left">
-						<a href="#" class="mdi mdi-television-guide card-mdi"></a>
-					</div>
-					<div class="media-body">
-						<h3 class="media-heading"><a href="#">Servicios Administrados</a></h3>
-						Nos podemos hacer cargo de tus sitios y aplicaciones,<br>
-						desde la infraestructura hasta su diseño y contenido.
+					<div class="card">
+						<div class="card-content">
+							<div class="media">
+								<div class="media-left">
+									<figure class="image is-48x48">
+										<a href="#google"><img src="/img/google.svg"></a>
+									</figure>
+								</div>
+								<div class="media-content">
+									<p class="title"><a href="#google">Google Workspace</a></p>
+								</div>
+							</div>
+							<div class="content">
+								La plataforma de comunicación y colaboración más completa.<br>
+								Correo, videoconferencia, calendario, contactos, almacenamiento...
+							</div>
+						</div>
 					</div>
 				</div>
 			</div>
 			<div class="columns">
 				<div class="column is-half">
-					<div class="media-left">
-						<a href="#" class="mdi mdi-code-json card-mdi"></a>
-					</div>
-					<div class="media-body">
-						<h3 class="media-heading"><a href="#">Desarrollo</a></h3>
-						Desarrollamos plataformas web y servicios especializados.
+					<div class="card">
+						<div class="card-content">
+							<div class="media">
+								<div class="media-left">
+									<figure class="image is-48x48">
+										<a href="#wordpress"><img src="/img/wordpress.svg"></a>
+									</figure>
+								</div>
+								<div class="media-content">
+									<p class="title"><a href="#wordpress">WordPress</a></p>
+								</div>
+							</div>
+							<div class="content">
+								Servicio especializado para sitios de WordPress,<br>
+								con acceso de administrador y certificado SSL.
+							</div>
+						</div>
 					</div>
 				</div>
 				<div class="column is-half">
-					<div class="media-left">
-						<a href="#" class="mdi mdi-clock card-mdi"></a>
+					<div class="card">
+						<div class="card-content">
+							<div class="media">
+								<div class="media-left">
+									<figure class="image is-48x48">
+										<a href="#hosting-compartido"><img src="/img/cloud.svg"></a>
+									</figure>
+								</div>
+								<div class="media-content">
+									<p class="title"><a href="#hosting-compartido">Hosting Compartido</a></p>
+								</div>
+							</div>
+							<div class="content">
+								Cuentas de hosting compartido sobre servidores virtuales en Linux<br>
+								CentOS con cPanel y SSL, Firewall, Antivirus, sin sobreventa.
+							</div>
+						</div>
 					</div>
-					<div class="media-body">
-						<h3 class="media-heading"><a href="#">Acuerdo de nivel de servicio real (SLA)</a></h3>
-						Cualquier interrupción de servicio, incluso mantenimientos<br>
-						programados, cuentan contra nuestra garantía.
+				</div>
+			</div>
+			<div class="columns">
+				<div class="column is-half">
+					<div class="card">
+						<div class="card-content">
+							<div class="media">
+								<div class="media-left">
+									<figure class="image is-48x48">
+										<a href="#servidores-virtuales"><img src="/img/vps.svg"></a>
+									</figure>
+								</div>
+								<div class="media-content">
+									<p class="title"><a href="#servidores-virtuales">Servidores Virtuales</a></p>
+								</div>
+							</div>
+							<div class="content">
+								Rendimiento, control, estabilidad, mantenimiento y reespaldo.<br>
+								Licencia de WHM/cPanel o Windows incluída.
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="column is-half">
+					<div class="card">
+						<div class="card-content">
+							<div class="media">
+								<div class="media-left">
+									<figure class="image is-48x48">
+										<a href="#"><img src="/img/admin.svg"></a>
+									</figure>
+								</div>
+								<div class="media-content">
+									<p class="title"><a href="#">Servicios Administrados</a></p>
+								</div>
+							</div>
+							<div class="content">
+								Nos podemos hacer cargo de tus sitios y aplicaciones,<br>
+								desde la infraestructura hasta su diseño y contenido.
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="columns">
+				<div class="column is-half">
+					<div class="card">
+						<div class="card-content">
+							<div class="media">
+								<div class="media-left">
+									<figure class="image is-48x48">
+										<a href="#"><img src="/img/code.svg"></a>
+									</figure>
+								</div>
+								<div class="media-content">
+									<p class="title"><a href="#">Desarrollo</a></p>
+								</div>
+							</div>
+							<div class="content">
+								Desarrollamos plataformas web y servicios especializados.
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="column is-half">
+					<div class="card">
+						<div class="card-content">
+							<div class="media">
+								<div class="media-left">
+									<figure class="image is-48x48">
+										<a href="#"><img src="/img/sla.svg"></a>
+									</figure>
+								</div>
+								<div class="media-content">
+									<p class="title"><a href="#">Nivel de servicio (SLA)</a></p>
+								</div>
+							</div>
+							<div class="content">
+								Cualquier interrupción de servicio, incluso mantenimientos<br>
+								programados, cuentan contra nuestra garantía.
+							</div>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -740,97 +829,150 @@
 		<div id="google" class="container is-fullhd">
 			<div class="jumbotron text-center">
 				<div>
-					<i class="mdi mdi-google head-mdi"></i>
+					<i class="google"></i>
 					<h1 class="head-title">Google Workspace</h1>
 					<p>Correo, calendarios, documentos, almacenamiento, videoconferencia.</p>
 				</div>
 			</div>
 			<div class="columns">
 				<div class="column is-half">
-					<div class="media-left">
-						<i class="mdi mdi-gmail card-mdi"></i>
-					</div>
-					<div class="media-body">
-						<h3 class="media-heading">Correo Gmail</h3>
-						Servicio profesional con tu dominio, sin anuncios, asistencia las 24 horas y aplicaciones nativas para dispositivos móviles.
+					<div class="card">
+						<div class="card-content">
+							<div class="media">
+								<div class="media-left">
+									<figure class="image is-48x48">
+										<img src="/img/email.svg">
+									</figure>
+								</div>
+								<div class="media-content">
+									<p class="title">Correo</p>
+								</div>
+							</div>
+							<div class="content">
+								Servicio profesional con tu dominio, sin anuncios, asistencia las 24 horas y aplicaciones nativas para dispositivos móviles.
+							</div>
+						</div>
 					</div>
 				</div>
 				<div class="column is-half">
-					<div class="media-left">
-						<i class="mdi mdi-google-drive card-mdi"></i>
-					</div>
-					<div class="media-body">
-						<h3 class="media-heading">Google Drive</h3>
-						Espacio para almacenar y compartir archivos, con clientes para sincronización con carpetas locales.
+					<div class="card">
+						<div class="card-content">
+							<div class="media">
+								<div class="media-left">
+									<figure class="image is-48x48">
+										<img src="/img/drive.svg">
+									</figure>
+								</div>
+								<div class="media-content">
+									<p class="title">Drive</p>
+								</div>
+							</div>
+							<div class="content">
+								Espacio para almacenar y compartir archivos, con clientes para sincronización con carpetas locales.
+							</div>
+						</div>
 					</div>
 				</div>
 			</div>
 			<div class="columns">
 				<div class="column is-half">
-					<div class="media-left">
-						<i class="mdi mdi-calendar card-mdi"></i>
-					</div>
-					<div class="media-body">
-						<h3 class="media-heading">Google Calendar</h3>
-						Organización de citas con integración a videoconferencias, ubicaciones en Google Maps, eventos recurrentes, etc.
+					<div class="card">
+						<div class="card-content">
+							<div class="media">
+								<div class="media-left">
+									<figure class="image is-48x48">
+										<img src="/img/calendar.svg">
+									</figure>
+								</div>
+								<div class="media-content">
+									<p class="title">Calendario</p>
+								</div>
+							</div>
+							<div class="content">
+								Organización de citas con integración a videoconferencias, ubicaciones en Google Maps, eventos recurrentes, etc.
+							</div>
+						</div>
 					</div>
 				</div>
 				<div class="column is-half">
-					<div class="media-left">
-						<i class="mdi mdi-file-document card-mdi"></i>
-					</div>
-					<div class="media-body">
-						<h3 class="media-heading">Google Docs</h3>
-						Colaboración en tiempo real sobre documentos, siempre guardados, sin ocupar espacio en Google Drive.
+					<div class="card">
+						<div class="card-content">
+							<div class="media">
+								<div class="media-left">
+									<figure class="image is-48x48">
+										<img src="/img/docs.svg">
+									</figure>
+								</div>
+								<div class="media-content">
+									<p class="title">Google Docs</p>
+								</div>
+							</div>
+							<div class="content">
+								Colaboración en tiempo real sobre documentos, siempre guardados, sin ocupar espacio en Google Drive.
+							</div>
+						</div>
 					</div>
 				</div>
 			</div>
 			<div class="columns">
 				<div class="column is-half">
-					<div class="media-left">
-						<i class="mdi mdi-message-video card-mdi"></i>
-					</div>
-					<div class="media-body">
-						<h3 class="media-heading">Chats y Meetings</h3>
-						Plataformas de comunicación, chat, presentación y videoconferencia para grupos de trabajo.
+					<div class="card">
+						<div class="card-content">
+							<div class="media">
+								<div class="media-left">
+									<figure class="image is-48x48">
+										<img src="/img/video.svg">
+									</figure>
+								</div>
+								<div class="media-content">
+									<p class="title">Meet</p>
+								</div>
+							</div>
+							<div class="content">
+								Plataformas de comunicación, chat, presentación y videoconferencia para grupos de trabajo.
+							</div>
+						</div>
 					</div>
 				</div>
 				<div class="column is-half">
-					<div class="media-left">
-						<i class="mdi mdi-cellphone-lock card-mdi"></i>
-					</div>
-					<div class="media-body">
-						<h3 class="media-heading">Seguridad</h3>
-						Administración de dispositivos móviles, auditoría y respaldos.
+					<div class="card">
+						<div class="card-content">
+							<div class="media">
+								<div class="media-left">
+									<figure class="image is-48x48">
+										<img src="/img/phonelock.svg">
+									</figure>
+								</div>
+								<div class="media-content">
+									<p class="title">Seguridad</p>
+								</div>
+							</div>
+							<div class="content">
+								Administración de dispositivos móviles, auditoría y respaldos.
+							</div>
+						</div>
 					</div>
 				</div>
 			</div>
 		</div>
 		<script>
 			document.addEventListener('DOMContentLoaded', () => {
-
 			// Get all "navbar-burger" elements
 			const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
-
 			// Check if there are any navbar burgers
 			if ($navbarBurgers.length > 0) {
-
 				// Add a click event on each of them
 				$navbarBurgers.forEach( el => {
 					el.addEventListener('click', () => {
-
 						// Get the target from the "data-target" attribute
 						const target = el.dataset.target;
 						const $target = document.getElementById(target);
-
 						// Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
 						el.classList.toggle('is-active');
 						$target.classList.toggle('is-active');
-
 					});
 				});
 			}
-
 			});
 		</script>
   </body>
