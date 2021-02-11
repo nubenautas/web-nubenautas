@@ -94,12 +94,12 @@
 				400 - falta token
 				200 - información básica del usuario del token
 
-			GET '/domains/:domain_name/records'
+			GET '/dns/:domain_name/records'
 				# body or params: (token)
 				404 - dominio o servicio de DNS inexistente
 				200 - registros A del dominio
 
-			PUT '/domains/:domain_name/records/:record_id'
+			PUT '/dns/:domain_name/records/:record_id'
 				# body or params: (token, name, content, ttl)
 				400 - falta algún parámetro o no existe el registro
 				200 - registro actualizado
@@ -120,8 +120,8 @@
 			my_ip = HTTParty.get('http://ip.nubenautas.net/').parsed_response.strip
 			token = HTTParty.post('https://cloud.nubenautas.com/api/token', :body => { :email => 'my@email.com', :password => 'secret' }).parsed_response
 			HTTParty.get("https://cloud.nubenautas.com/api/me?token=#{token}").parsed_response
-			HTTParty.get("https://cloud.nubenautas.com/api/domains/dominio.com/records?token=#{token}").parsed_response
-			HTTParty.put("https://cloud.nubenautas.com/api/domains/dominio.com/records/record_id?token=#{token}&content=#{my_ip}").parsed_response
+			HTTParty.get("https://cloud.nubenautas.com/api/dns/dominio.com/records?token=#{token}").parsed_response
+			HTTParty.put("https://cloud.nubenautas.com/api/dns/dominio.com/records/record_id?token=#{token}&content=#{my_ip}").parsed_response
 			</pre>
 		</div>
 	</body>
