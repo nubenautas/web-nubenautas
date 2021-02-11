@@ -79,31 +79,66 @@
 			</div>
 		</section>
 		<div class="container is-fullhd">
-			<div class="columns">
-				<div class="column is-three-quarters">
-				Anycast es una tecnología de enrutamiento en la que los paquetes de información son encaminados al mejor destino desde el punto de vista de latencia (nodo más cercano o con menor latencia), para lograr ésto una dirección IP se anuncia desde varios puntos diferentes geográficamente distribuídos, y como los routers en internet siempre estan optimizando sus rutas, escogerán la más cercana para quien realiza la petición.<br>
-				Ésto se traduce en mayor eficiencia en resolución y la menor latencia posible en cualquier petición, desde cualquier punto del mundo. Al mismo tiempo significa alta disponibilidad, ya que detrás de las 4 IPs de los DNS, hay más de 40 nodos distribuídos en todo el mundo, si cualquiera de ellos presenta una interrupción de servicio, se elimina de la tabla de ruteo y los demás se distribuyen la carga.<br><br>
-				Al ser un servicio basado en protocolo UDP sin estado, y siendo el servicio de DNS una dependencia para cualquier servicio ligado a un dominio, los ataques de denegación se servicio son cada vez más frecuentes y de mayor escala, por ello todos nuestros puntos de presencia cuentan con múltiples capas de defensa contra ataques de denegación de servicio (DDoS).
-				</div>
-				<div class="column is-one-quarter">
-					<div class="text-center bg-info">
-						<h3 class="bg-primary">$12 USD anuales</h3>
-							<h4>Registros ilimitados</h4>
-							<h4>Peticiones ilimitadas</h4>
-							<h4>Registros</h4>
-							<div>
-								<h5>A</h5>
-								<h5>MX</h5>
-								<h5>TXT</h5>
-								<h5>CNAME</h5>
-								<h5>AAAA</h5>
-								<h5>PTR</h5>
-								<h5>SRV</h5>
-								<h5 title="Redirecciones estilo CNAME con registros A">+ALIAS</h5>
-								<h5 title="Redirecciones a URLs completas registros A">+URL</h5>
-							</div>
+			<div class="tile is-ancestor">
+				<div class="tile is-vertical is-8">
+					<div class="tile">
+						<div class="tile is-parent">
+							<article class="tile is-child box">
+								<p class="title">DNSimple</p>
+								<p class="subtitle">
+									Nos integramos con DNSimple, uno de los pioneros en Anycast DNS y creador de registros ALIAS/URL, que ofrece un SLA de 100% con 6 puntos de presencia:<br>
+									[San Jose / Chicago / Washington / Amsterdam / Tokyo / Sydney]
+								</p>
+							</article>
+						</div>
+					</div>
+					<div class="tile">
+						<div class="tile is-parent">
+							<article class="tile is-child box">
+								<p class="title">DNSSEC</p>
+								<p class="subtitle">Provee un sistema avanzado de DNSSEC con rotación periódica de llaves CDS/CDNSKEY.</p>
+							</article>
+						</div>
+						<div class="tile is-parent">
+							<article class="tile is-child box">
+								<p class="title">API</p>
+								<p class="subtitle">Proveemos un API en base a JWT y JSON que permite crear/modificar/eliminar tus registros de DNS.</p>
+							</article>
+						</div>
+					</div>
+					<div class="tile">
+						<div class="tile is-parent">
+							<article class="tile is-child box">
+								<p class="title">URL</p>
+								<p class="subtitle">Registros URL a nivel DNS, que se traducen a registros A y TXT dando indicaciones a un servidor especial para realizar las redirecciones a nivel peticiones http(s).</p>
+							</article>
+						</div>
+						<div class="tile is-parent">
+							<article class="tile is-child box">
+								<p class="title">ALIAS</p>
+								<p class="subtitle">Registro especial que emula el funcionamiento de CNAMEs con registros A que se actualizan en tiempo real, lo que permite su uso para dominios apex (raíz).</p>
+							</article>
+						</div>
+					</div>
+					<div class="tile is-parent">
+						<article class="tile is-child box">
+							<p class="title">DDoS</p>
+							<p class="subtitle">Cuenta son múltiples proveedores para mitigración de DDoS, protegiendo tu dominio y todos los servicios relacionados, ya que cualquier servicio relacionado a un dominio se interrumpe si el servicio de DNS no responde (correo, sitio web, etc).</p>
+						</article>
 					</div>
 				</div>
+				<div class="tile is-parent">
+					<article class="tile is-child box">
+						<div class="content">
+							<p class="title">Anycast</p>
+							<p class="subtitle">
+								Anycast es una tecnología de enrutamiento en la que los paquetes de información son encaminados al mejor destino desde el punto de vista de latencia (nodo más cercano o con menor latencia), para lograr ésto una dirección IP se anuncia desde varios puntos diferentes geográficamente distribuídos, y como los routers en internet siempre estan optimizando sus rutas, escogerán la más cercana para quien realiza la petición.<br><br>
+								Ésto se traduce en mayor eficiencia en resolución y la menor latencia posible en cualquier petición, desde cualquier punto del mundo. Al mismo tiempo significa alta disponibilidad, ya que detrás de las 4 IPs de los DNS, hay más de 40 nodos distribuídos en todo el mundo, si cualquiera de ellos presenta una interrupción de servicio, se elimina de la tabla de ruteo y los demás se distribuyen la carga.<br><br>
+								Al ser un servicio basado en protocolo UDP sin estado, y siendo el servicio de DNS una dependencia para cualquier servicio ligado a un dominio, los ataques de denegación se servicio son cada vez más frecuentes y de mayor escala, por ello todos nuestros puntos de presencia cuentan con múltiples capas de defensa contra ataques de denegación de servicio (DDoS).
+							</p>
+						</div>
+					</article>
+				</div>		
 			</div>
 		</div>
 	</body>
