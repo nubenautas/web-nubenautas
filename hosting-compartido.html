@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="uft-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+    <title bind="title">Nubenautas</title>
+    <link rel="icon" href="/img/nubenautas.svg">
+		<link rel="stylesheet" href="/css/bulma.min.css?v=0.9.1">
+		<style>
+			body.has-navbar-fixed-top { padding-top: 5rem }
+			.navbar-item img { max-height: 4em }
+			.table td, th { text-align: right !important; }
+			.table td:first-child, th:first-child { text-align: left !important; }
+		</style>
+		<script>
+			document.addEventListener('DOMContentLoaded', () => {
+				const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
+				if ($navbarBurgers.length > 0) {
+					$navbarBurgers.forEach( el => {
+						el.addEventListener('click', () => {
+							const target = el.dataset.target;
+							const $target = document.getElementById(target);
+							el.classList.toggle('is-active');
+							$target.classList.toggle('is-active');
+						});
+					});
+				}
+			});
+		</script>
+  </head>
+  <body class="has-navbar-fixed-top">
+		<nav class="navbar is-fixed-top is-dark" role="navigation" aria-label="main navigation">
+			<div class="navbar-brand">
+				<a class="navbar-item" href="/"><img src="/img/nubenautas.svg"></a>
+				<a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navMenu">
+					<span aria-hidden="true"></span>
+					<span aria-hidden="true"></span>
+					<span aria-hidden="true"></span>
+				</a>
+			</div>
+			<div id="navMenu" class="navbar-menu">
+				<div class="navbar-start">
+					<a class="navbar-item" href="/dominios">Dominios</a>
+					<a class="navbar-item" href="/dns">Anycast DNS</a>
+					<a class="navbar-item" href="/ssl">Certificados SSL</a>
+					<a class="navbar-item" href="/google">Google Workspace</a>
+					<a class="navbar-item" href="/wordpress">WordPress</a>
+					<a class="navbar-item" href="/hosting-compartido">Hosting Compartido</a>
+					<a class="navbar-item" href="/servidores-virtuales">Servidores Virtuales</a>
+					<div class="navbar-item has-dropdown is-hoverable"><a class="navbar-link">Soluciones</a>
+						<div class="navbar-dropdown">
+							<a class="navbar-item" href="/administracion">Servicios Administrados</a>
+							<a class="navbar-item" href="/plataformas">Plataformas Especializadas</a>
+							<a class="navbar-item" href="/desarrollo">Desarrollo Web</a>
+							<a class="navbar-item" href="/api">Nubenautas API</a>
+						</div>
+					</div>
+				</div>
+				<div class="navbar-end">
+					<div class="navbar-item">
+						<div class="buttons">
+							<a class="button is-primary" href="https://cloud.nubenautas.com/registro">
+								<strong>Registro</strong>
+							</a>
+							<a class="button is-light" href="https://cloud.nubenautas.com/">
+								Ingreso
+							</a>
+						</div>
+					</div>
+					<a class="navbar-item" href="https://t.me/nubenautas" target="_blank"><img src="/img/telegram.svg" width="42px" height="42px"></a>
+				</div>
+			</div>
+		</nav>
+		<section id="hosting-compartido" class="hero is-light is-medium">
+			<div class="hero-body has-text-centered">
+				<p class="title"><img src="/img/cloud.svg"> Hosting Compartido</p>
+				<p class="subtitle">Tu sitio a tu manera.</p>
+			</div>
+		</section>
+		<div class="container is-fullhd">
+			<section id="pricing-larger-plans" class="primary extra-space-bottom">
+				<div class="container is-fullhd">
+					<div class="row pricing-view">
+						<div class="col-sm-12 reduce-gutter">
+							<div class="table-responsive">
+								<table id="pricing-larger-plans-table" class="table table-pricing table-striped pricing-plans-table text-center">
+									<thead>
+										<tr>
+											<th></th>
+											<th class="text-center">Sitios</th>
+											<th class="text-center">Almacenamiento</th>
+											<th class="text-center">Precio [USD]</th>
+										</tr>
+									</thead>
+									<tbody>
+											<tr>
+												<td>Plan <strong>1</strong></td>
+												<td>1</td>
+												<td>10 GB</td>
+												<td class="price"><strong>$9 / mes </strong>($99 / año)</td>
+											</tr>
+											<tr>
+												<td>Plan <strong>2</strong></td>
+												<td>2</td>
+												<td>20 GB</td>
+												<td class="price"><strong>$18 / mes </strong>($198 / año)</td>
+											</tr>
+											<tr>
+												<td>Plan <strong>3</strong></td>
+												<td>3</td>
+												<td>30 GB</td>
+												<td class="price"><strong>$27 / mes </strong>($297 / año)</td>
+											</tr>
+											<tr>
+												<td>Plan <strong>4</strong></td>
+												<td>4</td>
+												<td>40 GB</td>
+												<td class="price"><strong>$36 / mes </strong>($396 / año)</td>
+											</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+		</div>
+	</body>
+</html>

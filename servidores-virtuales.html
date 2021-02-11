@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="uft-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+    <title bind="title">Nubenautas</title>
+    <link rel="icon" href="/img/nubenautas.svg">
+		<link rel="stylesheet" href="/css/bulma.min.css?v=0.9.1">
+		<style>
+			body.has-navbar-fixed-top { padding-top: 5rem }
+			.navbar-item img { max-height: 4em }
+			.table td, th { text-align: right !important; }
+			.table td:first-child, th:first-child { text-align: left !important; }
+		</style>
+		<script>
+			document.addEventListener('DOMContentLoaded', () => {
+				const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
+				if ($navbarBurgers.length > 0) {
+					$navbarBurgers.forEach( el => {
+						el.addEventListener('click', () => {
+							const target = el.dataset.target;
+							const $target = document.getElementById(target);
+							el.classList.toggle('is-active');
+							$target.classList.toggle('is-active');
+						});
+					});
+				}
+			});
+		</script>
+  </head>
+  <body class="has-navbar-fixed-top">
+		<nav class="navbar is-fixed-top is-dark" role="navigation" aria-label="main navigation">
+			<div class="navbar-brand">
+				<a class="navbar-item" href="/"><img src="/img/nubenautas.svg"></a>
+				<a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navMenu">
+					<span aria-hidden="true"></span>
+					<span aria-hidden="true"></span>
+					<span aria-hidden="true"></span>
+				</a>
+			</div>
+			<div id="navMenu" class="navbar-menu">
+				<div class="navbar-start">
+					<a class="navbar-item" href="/dominios">Dominios</a>
+					<a class="navbar-item" href="/dns">Anycast DNS</a>
+					<a class="navbar-item" href="/ssl">Certificados SSL</a>
+					<a class="navbar-item" href="/google">Google Workspace</a>
+					<a class="navbar-item" href="/wordpress">WordPress</a>
+					<a class="navbar-item" href="/hosting-compartido">Hosting Compartido</a>
+					<a class="navbar-item" href="/servidores-virtuales">Servidores Virtuales</a>
+					<div class="navbar-item has-dropdown is-hoverable"><a class="navbar-link">Soluciones</a>
+						<div class="navbar-dropdown">
+							<a class="navbar-item" href="/administracion">Servicios Administrados</a>
+							<a class="navbar-item" href="/plataformas">Plataformas Especializadas</a>
+							<a class="navbar-item" href="/desarrollo">Desarrollo Web</a>
+							<a class="navbar-item" href="/api">Nubenautas API</a>
+						</div>
+					</div>
+				</div>
+				<div class="navbar-end">
+					<div class="navbar-item">
+						<div class="buttons">
+							<a class="button is-primary" href="https://cloud.nubenautas.com/registro">
+								<strong>Registro</strong>
+							</a>
+							<a class="button is-light" href="https://cloud.nubenautas.com/">
+								Ingreso
+							</a>
+						</div>
+					</div>
+					<a class="navbar-item" href="https://t.me/nubenautas" target="_blank"><img src="/img/telegram.svg" width="42px" height="42px"></a>
+				</div>
+			</div>
+		</nav>
+		<section id="servidores-virtuales" class="hero is-light is-medium">
+			<div class="hero-body has-text-centered">
+				<p class="title"><img src="/img/vps.svg"> Servidores Virtuales</p>
+				<p class="subtitle">Cloud VPS, sin calculadora, escala bajo demanda.</p>
+			</div>
+		</section>
+		<div class="container is-fullhd">
+			<div class="jumbotron text-center">
+				<div>
+					<p>
+						Recursos empaquetados en un esquema simple, respaldos diarios,<br>
+						asesoría en su administración y buenas prácticas de seguridad.<br>
+						Licencia de cPanel para Linux CentOS<br>
+						Licencia de Windows Server 2016 x64
+					</p>
+				</div>
+			</div>
+			<section id="pricing-larger-plans" class="primary extra-space-bottom">
+				<div class="container is-fullhd">
+					<div class="row pricing-view">
+						<div class="col-sm-12 reduce-gutter">
+							<div class="table-responsive">
+								<table id="pricing-larger-plans-table" class="table table-pricing table-striped pricing-plans-table text-center">
+									<thead>
+										<tr>
+											<th></th>
+											<th class="text-center">RAM</th>
+											<th class="text-center">CPU</th>
+											<th class="text-center">Almacenamiento</th>
+											<th class="text-center">Transferencia</th>
+											<th class="text-center">Descarga</th>
+											<th class="text-center">Subida</th>
+											<th class="text-center">Precio [USD]</th>
+										</tr>
+									</thead>
+									<tbody>
+											<tr>
+												<td>VPS <strong>1</strong></td>
+												<td>2 GB</td>
+												<td>1 Núcleo</td>
+												<td>50 GB SSD</td>
+												<td>2 TB</td>
+												<td>40 Gbps</td>
+												<td>1 Gbps</td>
+												<td class="price"><strong>$55 / mes </strong>($605 / año)</td>
+											</tr>
+											<tr>
+												<td>VPS <strong>2</strong></td>
+												<td>4 GB</td>
+												<td>2 Núcleos</td>
+												<td>80 GB SSD</td>
+												<td>4 TB</td>
+												<td>40 Gbps</td>
+												<td>1 Gbps</td>
+												<td class="price"><strong>$80 / mes </strong>($880 / año)</td>
+											</tr>
+											<tr>
+												<td>VPS <strong>3</strong></td>
+												<td>8 GB</td>
+												<td>4 Núcleos</td>
+												<td>160 GB SSD</td>
+												<td>5 TB</td>
+												<td>40 Gbps</td>
+												<td>1 Gbps</td>
+												<td class="price"><strong>$130 / mes </strong>($1,430 / año)</td>
+											</tr>
+											<tr>
+												<td>VPS <strong>4</strong></td>
+												<td>16 GB</td>
+												<td>6 Núcleos</td>
+												<td>320 GB SSD</td>
+												<td>8 TB</td>
+												<td>40 Gbps</td>
+												<td>1 Gbps</td>
+												<td class="price"><strong>$230 / mes </strong>($2,530 / año)</td>
+											</tr>
+											<tr>
+												<td>VPS <strong>5</strong></td>
+												<td>32 GB</td>
+												<td>8 Núcleos</td>
+												<td>640 GB SSD</td>
+												<td>16 TB</td>
+												<td>40 Gbps</td>
+												<td>2 Gbps</td>
+												<td class="price"><strong>$430 / mes </strong>($4,730 / año)</td>
+											</tr>
+											<tr>
+												<td>VPS <strong>6</strong></td>
+												<td>64 GB</td>
+												<td>16 Núcleos</td>
+												<td>1280 GB SSD</td>
+												<td>20 TB</td>
+												<td>40 Gbps</td>
+												<td>4 Gbps</td>
+												<td class="price"><strong>$830 / mes </strong>($9,130 / año)</td>
+											</tr>
+											<tr>
+												<td>VPS <strong>7</strong></td>
+												<td>96 GB</td>
+												<td>20 Núcleos</td>
+												<td>1920 GB SSD</td>
+												<td>20 TB</td>
+												<td>40 Gbps</td>
+												<td>6 Gbps</td>
+												<td class="price"><strong>$1,230 / mes </strong>($13,530 / año)</td>
+											</tr>
+											<tr>
+												<td>VPS <strong>8</strong></td>
+												<td>128 GB</td>
+												<td>24 Núcleos</td>
+												<td>2560 GB SSD</td>
+												<td>20 TB</td>
+												<td>40 Gbps</td>
+												<td>8 Gbps</td>
+												<td class="price"><strong>$1,630 / mes </strong>($17,930 / año)</td>
+											</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+		</div>
+	</body>
+</html>

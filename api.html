@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="uft-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+    <title bind="title">Nubenautas</title>
+    <link rel="icon" href="/img/nubenautas.svg">
+		<link rel="stylesheet" href="/css/bulma.min.css?v=0.9.1">
+		<style>
+			body.has-navbar-fixed-top { padding-top: 5rem }
+			.navbar-item img { max-height: 4em }
+			.table td, th { text-align: right !important; }
+			.table td:first-child, th:first-child { text-align: left !important; }
+		</style>
+		<script>
+			document.addEventListener('DOMContentLoaded', () => {
+				const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
+				if ($navbarBurgers.length > 0) {
+					$navbarBurgers.forEach( el => {
+						el.addEventListener('click', () => {
+							const target = el.dataset.target;
+							const $target = document.getElementById(target);
+							el.classList.toggle('is-active');
+							$target.classList.toggle('is-active');
+						});
+					});
+				}
+			});
+		</script>
+  </head>
+  <body class="has-navbar-fixed-top">
+		<nav class="navbar is-fixed-top is-dark" role="navigation" aria-label="main navigation">
+			<div class="navbar-brand">
+				<a class="navbar-item" href="/"><img src="/img/nubenautas.svg"></a>
+				<a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navMenu">
+					<span aria-hidden="true"></span>
+					<span aria-hidden="true"></span>
+					<span aria-hidden="true"></span>
+				</a>
+			</div>
+			<div id="navMenu" class="navbar-menu">
+				<div class="navbar-start">
+					<a class="navbar-item" href="/dominios">Dominios</a>
+					<a class="navbar-item" href="/dns">Anycast DNS</a>
+					<a class="navbar-item" href="/ssl">Certificados SSL</a>
+					<a class="navbar-item" href="/google">Google Workspace</a>
+					<a class="navbar-item" href="/wordpress">WordPress</a>
+					<a class="navbar-item" href="/hosting-compartido">Hosting Compartido</a>
+					<a class="navbar-item" href="/servidores-virtuales">Servidores Virtuales</a>
+					<div class="navbar-item has-dropdown is-hoverable"><a class="navbar-link">Soluciones</a>
+						<div class="navbar-dropdown">
+							<a class="navbar-item" href="/administracion">Servicios Administrados</a>
+							<a class="navbar-item" href="/plataformas">Plataformas Especializadas</a>
+							<a class="navbar-item" href="/desarrollo">Desarrollo Web</a>
+							<a class="navbar-item" href="/api">Nubenautas API</a>
+						</div>
+					</div>
+				</div>
+				<div class="navbar-end">
+					<div class="navbar-item">
+						<div class="buttons">
+							<a class="button is-primary" href="https://cloud.nubenautas.com/registro">
+								<strong>Registro</strong>
+							</a>
+							<a class="button is-light" href="https://cloud.nubenautas.com/">
+								Ingreso
+							</a>
+						</div>
+					</div>
+					<a class="navbar-item" href="https://t.me/nubenautas" target="_blank"><img src="/img/telegram.svg" width="42px" height="42px"></a>
+				</div>
+			</div>
+		</nav>
+		<section id="dominios" class="hero is-link is-medium">
+			<div class="hero-body has-text-centered">
+				<p class="title"><img src="/img/link.svg"> JWT API</p>
+				<p class="subtitle">Integra nuestros servicios a los tuyos.</p>
+			</div>
+		</section>
+		<div class="container is-fullhd">
+			<pre>
+			Guía básica para utilizar nuestra API, sobre la base de URL: https://cloud.nubenautas.com/api
+
+			Se pueden usar las siguientes rutas:
+
+			POST '/token'
+				# body or params: (email, password)
+				400 - falta algún parámetro
+				403 - credenciales erróneas
+				200 - jwt
+
+			GET '/me'
+				# body or params: (token)
+				400 - falta token
+				200 - información básica del usuario del token
+
+			GET '/domains/:domain_name/records'
+				# body or params: (token)
+				404 - dominio o servicio de DNS inexistente
+				200 - registros A del dominio
+
+			PUT '/domains/:domain_name/records/:record_id'
+				# body or params: (token, name, content, ttl)
+				400 - falta algún parámetro o no existe el registro
+				200 - registro actualizado
+
+
+			Sólo se actualizarán los parámetros incluídos, los que no se envíen no serán actualizados, es decir,
+			para actualizar la IP de un registro sólo se necesita conocer el record_id y mandar token y content
+			El parámetro name es nombre de subdominio, que puede incluir el dominio o no ('sub.example.com' o 'sub')
+			para indicar dominio raíz, o subdominio nulo, se pueden usar arroba, punto o cadena de texto vacía ['@', '.', '']
+
+			Para conocer la IP pública de su conexión se puede consultar:
+
+			http://ip.nubenautas.net/
+
+
+			Ejemplo en Ruby con HTTParty:
+
+			my_ip = HTTParty.get('http://ip.nubenautas.net/').parsed_response.strip
+			token = HTTParty.post('https://cloud.nubenautas.com/api/token', :body => { :email => 'my@email.com', :password => 'secret' }).parsed_response
+			HTTParty.get("https://cloud.nubenautas.com/api/me?token=#{token}").parsed_response
+			HTTParty.get("https://cloud.nubenautas.com/api/domains/dominio.com/records?token=#{token}").parsed_response
+			HTTParty.put("https://cloud.nubenautas.com/api/domains/dominio.com/records/record_id?token=#{token}&content=#{my_ip}").parsed_response
+			</pre>
+		</div>
+	</body>
+</html>

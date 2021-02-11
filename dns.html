@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="uft-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+    <title bind="title">Nubenautas</title>
+    <link rel="icon" href="/img/nubenautas.svg">
+		<link rel="stylesheet" href="/css/bulma.min.css?v=0.9.1">
+		<style>
+			body.has-navbar-fixed-top { padding-top: 5rem }
+			.navbar-item img { max-height: 4em }
+			.table td, th { text-align: right !important; }
+			.table td:first-child, th:first-child { text-align: left !important; }
+		</style>
+		<script>
+			document.addEventListener('DOMContentLoaded', () => {
+				const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
+				if ($navbarBurgers.length > 0) {
+					$navbarBurgers.forEach( el => {
+						el.addEventListener('click', () => {
+							const target = el.dataset.target;
+							const $target = document.getElementById(target);
+							el.classList.toggle('is-active');
+							$target.classList.toggle('is-active');
+						});
+					});
+				}
+			});
+		</script>
+  </head>
+  <body class="has-navbar-fixed-top">
+		<nav class="navbar is-fixed-top is-dark" role="navigation" aria-label="main navigation">
+			<div class="navbar-brand">
+				<a class="navbar-item" href="/"><img src="/img/nubenautas.svg"></a>
+				<a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navMenu">
+					<span aria-hidden="true"></span>
+					<span aria-hidden="true"></span>
+					<span aria-hidden="true"></span>
+				</a>
+			</div>
+			<div id="navMenu" class="navbar-menu">
+				<div class="navbar-start">
+					<a class="navbar-item" href="/dominios">Dominios</a>
+					<a class="navbar-item" href="/dns">Anycast DNS</a>
+					<a class="navbar-item" href="/ssl">Certificados SSL</a>
+					<a class="navbar-item" href="/google">Google Workspace</a>
+					<a class="navbar-item" href="/wordpress">WordPress</a>
+					<a class="navbar-item" href="/hosting-compartido">Hosting Compartido</a>
+					<a class="navbar-item" href="/servidores-virtuales">Servidores Virtuales</a>
+					<div class="navbar-item has-dropdown is-hoverable"><a class="navbar-link">Soluciones</a>
+						<div class="navbar-dropdown">
+							<a class="navbar-item" href="/administracion">Servicios Administrados</a>
+							<a class="navbar-item" href="/plataformas">Plataformas Especializadas</a>
+							<a class="navbar-item" href="/desarrollo">Desarrollo Web</a>
+							<a class="navbar-item" href="/api">Nubenautas API</a>
+						</div>
+					</div>
+				</div>
+				<div class="navbar-end">
+					<div class="navbar-item">
+						<div class="buttons">
+							<a class="button is-primary" href="https://cloud.nubenautas.com/registro">
+								<strong>Registro</strong>
+							</a>
+							<a class="button is-light" href="https://cloud.nubenautas.com/">
+								Ingreso
+							</a>
+						</div>
+					</div>
+					<a class="navbar-item" href="https://t.me/nubenautas" target="_blank"><img src="/img/telegram.svg" width="42px" height="42px"></a>
+				</div>
+			</div>
+		</nav>
+		<section id="dns" class="hero is-light is-medium">
+			<div class="hero-body has-text-centered">
+				<p class="title"><img src="/img/dns.svg"> Anycast DNS</p>
+				<p class="subtitle">Todos los servicios asociados a un dominio dependen de su servicio de DNS,<br>
+					por eso ofrecemos un servicio profesional de DNS de alta disponibilidad, redundante, distribuido geográficamente.</p>
+			</div>
+		</section>
+		<div class="container is-fullhd">
+			<div class="columns">
+				<div class="column is-three-quarters">
+				Anycast es una tecnología de enrutamiento en la que los paquetes de información son encaminados al mejor destino desde el punto de vista de latencia (nodo más cercano o con menor latencia), para lograr ésto una dirección IP se anuncia desde varios puntos diferentes geográficamente distribuídos, y como los routers en internet siempre estan optimizando sus rutas, escogerán la más cercana para quien realiza la petición.<br>
+				Ésto se traduce en mayor eficiencia en resolución y la menor latencia posible en cualquier petición, desde cualquier punto del mundo. Al mismo tiempo significa alta disponibilidad, ya que detrás de las 4 IPs de los DNS, hay más de 40 nodos distribuídos en todo el mundo, si cualquiera de ellos presenta una interrupción de servicio, se elimina de la tabla de ruteo y los demás se distribuyen la carga.<br><br>
+				Al ser un servicio basado en protocolo UDP sin estado, y siendo el servicio de DNS una dependencia para cualquier servicio ligado a un dominio, los ataques de denegación se servicio son cada vez más frecuentes y de mayor escala, por ello todos nuestros puntos de presencia cuentan con múltiples capas de defensa contra ataques de denegación de servicio (DDoS).
+				</div>
+				<div class="column is-one-quarter">
+					<div class="text-center bg-info">
+						<h3 class="bg-primary">$12 USD anuales</h3>
+							<h4>Registros ilimitados</h4>
+							<h4>Peticiones ilimitadas</h4>
+							<h4>Registros</h4>
+							<div>
+								<h5>A</h5>
+								<h5>MX</h5>
+								<h5>TXT</h5>
+								<h5>CNAME</h5>
+								<h5>AAAA</h5>
+								<h5>PTR</h5>
+								<h5>SRV</h5>
+								<h5 title="Redirecciones estilo CNAME con registros A">+ALIAS</h5>
+								<h5 title="Redirecciones a URLs completas registros A">+URL</h5>
+							</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
