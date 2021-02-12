@@ -1,8 +1,16 @@
 # JWT API
 
-## URL Base: `https://cloud.nubenautas.com/api`
+__BaseURL:__ `https://cloud.nubenautas.com/api`
 
-## Autenticación:
+__Request _Headers_:__ `Authorization=[authorization_code]` except in `/sign_in`.
+
+__[Authentication](#authentication)__
+
+__[DNS](#dns)__
+
+__[Public IP](#public-ip)__
+
+## Authentication:
 
 __POST__ `/sign_in`
 * **Request:**
@@ -17,22 +25,13 @@ __POST__ `/sign_in`
 
     *Code:* 200
 
-    *Headers:*
-
-    `Authorization=[authorization_code]`
+    *Headers:* `Authorization=[authorization_code]`
 
 __POST__ `/sign_out`
-* **Request:**
-
-    *Headers:*
-
-    `Authorization=[authorization_code]`
-
 * **Response:**
 
     *Code:* 200
 
-***Nota:*** El header de toda request deberá contener `Authorization` excepto `sign_in`.
 
 ## DNS:
 __GET__ `/dns/[domain_name]/records`
@@ -44,26 +43,26 @@ __GET__ `/dns/[domain_name]/records`
     *Content example:*
 ```json
 [
-  {
-    "id": 20142611,
-    "content": "127.0.0.1",
-    "created_at": "2020-10-25T22:23:09Z",
-    "domain_id": ".sentidocomun.ninja",
-    "name": "",
-    "prio": null,
-    "ttl": 3600,
-    "type": "A"
-  },
-  {
-    "id": 22545628,
-    "content": "127.0.0.1",
-    "created_at": "2020-10-25T22:23:14Z",
-    "domain_id": "sentidocomun.ninja",
-    "name": "www",
-    "prio": null,
-    "ttl": 3600,
-    "type": "A"
-  }
+    {
+      "id": 20142611,
+      "content": "127.0.0.1",
+      "created_at": "2020-10-25T22:23:09Z",
+      "domain_id": ".sentidocomun.ninja",
+      "name": "",
+      "prio": null,
+      "ttl": 3600,
+      "type": "A"
+    },
+    {
+      "id": 22545628,
+      "content": "127.0.0.1",
+      "created_at": "2020-10-25T22:23:14Z",
+      "domain_id": "sentidocomun.ninja",
+      "name": "www",
+      "prio": null,
+      "ttl": 3600,
+      "type": "A"
+    }
 ]
 ```
 
@@ -92,14 +91,14 @@ __POST__ `/dns/[domain_name]/records/`
     *Content example:*
 ```json
 {
-  "id": 20245620,
-  "content": "127.0.0.1",
-  "created_at": "2020-10-25T22:23:14Z",
-  "domain_id": "sentidocomun.ninja",
-  "name": "test",
-  "prio": null,
-  "ttl": 3600,
-  "type": "A"
+    "id": 20245620,
+    "content": "127.0.0.1",
+    "created_at": "2020-10-25T22:23:14Z",
+    "domain_id": "sentidocomun.ninja",
+    "name": "test",
+    "prio": null,
+    "ttl": 3600,
+    "type": "A"
 }
 ```
 
@@ -127,14 +126,14 @@ __PUT__ `/dns/[domain_name]/records/[record_id]`
     *Content example:*
 ```json
 {
-  "id": 20245620,
-  "content": "127.0.0.1",
-  "created_at": "2020-10-25T22:23:14Z",
-  "domain_id": "sentidocomun.ninja",
-  "name": "test",
-  "prio": null,
-  "ttl": 3600,
-  "type": "A"
+    "id": 20245620,
+    "content": "127.0.0.1",
+    "created_at": "2020-10-25T22:23:14Z",
+    "domain_id": "sentidocomun.ninja",
+    "name": "test",
+    "prio": null,
+    "ttl": 3600,
+    "type": "A"
 }
 ```
 
@@ -143,6 +142,6 @@ __DEL__ `/dns/[domain_name]/records/[record_id]`
 
     *Code:* 200
 
-## Obtén tu IPv4 pública actual:
+## Public IP:
 
 __GET__ `http://ip.nubenautas.net/`
