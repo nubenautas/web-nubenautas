@@ -9,9 +9,9 @@ __POST__ `/sign_in`
 
 *Required URL Params:*
 
-  `email=[string]`
+    `email=[string]`
   
-  `password=[string]`
+    `password=[string]`
 
 * **Response:**
 *Code:* 200
