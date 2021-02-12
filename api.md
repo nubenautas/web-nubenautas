@@ -44,24 +44,24 @@ __GET__ `/dns/[domain_name]/records`
 ```json
 [
     {
-        "id": 20142611,
-        "content": "127.0.0.1",
-        "created_at": "2020-10-25T22:23:09Z",
-        "domain_id": ".sentidocomun.ninja",
-        "name": "",
-        "prio": null,
-        "ttl": 3600,
-        "type": "A"
+      "id": 20142611,
+      "content": "127.0.0.1",
+      "created_at": "2020-10-25T22:23:09Z",
+      "domain_id": ".sentidocomun.ninja",
+      "name": "",
+      "prio": null,
+      "ttl": 3600,
+      "type": "A"
     },
     {
-        "id": 22545628,
-        "content": "127.0.0.1",
-        "created_at": "2020-10-25T22:23:14Z",
-        "domain_id": "sentidocomun.ninja",
-        "name": "www",
-        "prio": null,
-        "ttl": 3600,
-        "type": "A"
+      "id": 22545628,
+      "content": "127.0.0.1",
+      "created_at": "2020-10-25T22:23:14Z",
+      "domain_id": "sentidocomun.ninja",
+      "name": "www",
+      "prio": null,
+      "ttl": 3600,
+      "type": "A"
     }
 ]
 ```
