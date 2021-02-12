@@ -1,13 +1,16 @@
 # JWT API
 
-### URL Base: `https://cloud.nubenautas.com/api`
-### Request Headers: `Authorization=[authorization_code]` excepto en `/sign_in`.
+__URL Base:__ `https://cloud.nubenautas.com/api`
 
-### [Autenticación](#autenticación)
-### [DNS](#dns)
-### [IP Pública](#ip-pública)
+__Request _Headers_:__ `Authorization=[authorization_code]` except in `/sign_in`.
 
-## Autenticación:
+__[Authentication](#authentication)__
+
+__[DNS](#dns)__
+
+__[Public IP](#public-ip)__
+
+## Authentication:
 
 __POST__ `/sign_in`
 * **Request:**
@@ -139,6 +142,6 @@ __DEL__ `/dns/[domain_name]/records/[record_id]`
 
     *Code:* 200
 
-## IP pública:
+## Public IP:
 
 __GET__ `http://ip.nubenautas.net/`
