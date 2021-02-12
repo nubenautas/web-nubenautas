@@ -90,7 +90,7 @@ __POST__ `/dns/[domain_name]/records/`
     *Code:* 200
 
     *Content example:*
-    ```json
+```json
 {
   "id": 20245620,
   "content": "127.0.0.1",
@@ -101,7 +101,7 @@ __POST__ `/dns/[domain_name]/records/`
   "ttl": 3600,
   "type": "A"
 }
-    ```
+```
 
 __PUT__ `/dns/[domain_name]/records/[record_id]`
 * **Request:**
@@ -125,7 +125,7 @@ __PUT__ `/dns/[domain_name]/records/[record_id]`
     *Code:* 200
 
     *Content example:*
-    ```json
+```json
 {
   "id": 20245620,
   "content": "127.0.0.1",
@@ -136,7 +136,7 @@ __PUT__ `/dns/[domain_name]/records/[record_id]`
   "ttl": 3600,
   "type": "A"
 }
-    ```
+```
 
 __DEL__ `/dns/[domain_name]/records/[record_id]`
     * **Response:**
