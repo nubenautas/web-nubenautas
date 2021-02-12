@@ -7,7 +7,7 @@
 __POST__ `/sign_in`
 * **Request:**
 
-*Required URL Params:*
+    *Required URL Params:*
 
     `email=[string]`
   
