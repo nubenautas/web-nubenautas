@@ -139,7 +139,7 @@ __PUT__ `/dns/[domain_name]/records/[record_id]`
 ```
 
 __DEL__ `/dns/[domain_name]/records/[record_id]`
-    * **Response:**
+* **Response:**
 
     *Code:* 200
 
