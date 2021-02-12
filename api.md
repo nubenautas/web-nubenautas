@@ -6,20 +6,29 @@
 
 __POST__ `/sign_in`
 * **Request:**
+
 *Required URL Params:*
+
   `email=[string]`
+  
   `password=[string]`
-`
+
 * **Response:**
 *Code:* 200
+
 *Headers:*
+
 `Authorization=[authorization_code]`
 
 __POST__ `/sign_out`
 * **Request:**
+
 *Headers:*
+
 `Authorization=[authorization_code]`
+
 * **Response:**
+
 *Code:* 200
 
 ***Nota:*** El header de toda request deberá contener `Authorization` excepto `sign_in`.
@@ -28,6 +37,7 @@ __GET__ `/dns/[domain_name]/records`
 
 * **Response:**
 *Code:* 200
+
 *Content example:*
 ```json
 [
@@ -56,17 +66,26 @@ __GET__ `/dns/[domain_name]/records`
 
 __POST__ `/dns/[domain_name]/records/`
 * **Request:**
+
 *Required URL Params:*
+
   `type=[string]`
+  
   `name=[string]`
+  
   `content=[string]`
+  
 *Optional URL Params:*
+
   `ttl=[string]`
+  
   `prio=[string]`
 
 
 * **Response:**
+
 *Code:* 200
+
 *Content example:*
 ```json
 {
@@ -84,14 +103,22 @@ __POST__ `/dns/[domain_name]/records/`
 __PUT__ `/dns/[domain_name]/records/[record_id]`
 
 *Required URL Params:*
+
   `type=[string]`
+  
   `name=[string]`
+  
   `content=[string]`
+  
 *Optional URL Params:*
+
   `ttl=[string]`
+  
   `prio=[string]`
 * **Response:**
+
 *Code:* 200
+
 *Content example:*
 ```json
 {
@@ -108,6 +135,7 @@ __PUT__ `/dns/[domain_name]/records/[record_id]`
 
 __DEL__ `/dns/[domain_name]/records/[record_id]`
 * **Response:**
+
 *Code:* 200
 
 ## Obtén tu IPv4 pública actual:
