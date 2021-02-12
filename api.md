@@ -1,6 +1,6 @@
 # JWT API
 
-__URL Base:__ `https://cloud.nubenautas.com/api`
+__BaseURL:__ `https://cloud.nubenautas.com/api`
 
 __Request _Headers_:__ `Authorization=[authorization_code]` except in `/sign_in`.
 
