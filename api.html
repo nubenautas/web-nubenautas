@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="uft-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+    <title bind="title">Nubenautas API</title>
+    <link rel="icon" href="/img/nubenautas.svg">
+		<link rel="stylesheet" href="/css/bulma.min.css?v=0.9.1">
+		<style>
+			.navbar-item img { max-height: 4em }
+			.table td, th { text-align: right !important; }
+			.table td:first-child, th:first-child { text-align: left !important; }
+			#api-docs { display: inline-block; }
+			#api-menu {
+				position: sticky;
+				display: inline-block;
+				vertical-align: top;
+				max-height: 100vh;
+				overflow-y: auto;
+				bottom: 0;
+				top: 0;
+			}
+		</style>
+		<script>
+			document.addEventListener('DOMContentLoaded', () => {
+				const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
+				if ($navbarBurgers.length > 0) {
+					$navbarBurgers.forEach( el => {
+						el.addEventListener('click', () => {
+							const target = el.dataset.target;
+							const $target = document.getElementById(target);
+							el.classList.toggle('is-active');
+							$target.classList.toggle('is-active');
+						});
+					});
+				}
+			});
+		</script>
+  </head>
+  <body>
+		<nav class="navbar is-dark" role="navigation" aria-label="main navigation">
+			<div class="navbar-brand">
+				<a class="navbar-item" href="/"><img src="/img/nubenautas.svg"></a>
+				<a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navMenu">
+					<span aria-hidden="true"></span>
+					<span aria-hidden="true"></span>
+					<span aria-hidden="true"></span>
+				</a>
+			</div>
+			<div id="navMenu" class="navbar-menu">
+				<div class="navbar-start">
+					<div class="navbar-item has-dropdown is-hoverable"><a class="navbar-link">Servicios</a>
+						<div class="navbar-dropdown">
+							<a class="navbar-item" href="/dominios">Registro de Dominios</a>
+							<a class="navbar-item" href="/dns">Anycast DNS</a>
+							<a class="navbar-item" href="/ssl">Certificados SSL</a>
+							<a class="navbar-item" href="/google">Google Workspace</a>
+							<a class="navbar-item" href="/wordpress">WordPress</a>
+							<a class="navbar-item" href="/hosting-compartido">Web Hosting</a>
+							<a class="navbar-item" href="/servidores-virtuales">Servidores Virtuales</a>
+						</div>
+					</div>
+					<div class="navbar-item has-dropdown is-hoverable"><a class="navbar-link">Soluciones</a>
+						<div class="navbar-dropdown">
+							<a class="navbar-item" href="/administracion">Servicios Administrados</a>
+							<a class="navbar-item" href="/plataformas">Plataformas Especializadas</a>
+							<a class="navbar-item" href="/desarrollo">Desarrollo Web</a>
+							<a class="navbar-item" href="#">Nubenautas API</a>
+						</div>
+					</div>
+				</div>
+				<div class="navbar-end">
+					<div class="navbar-item">
+						<div class="buttons">
+							<a class="button is-primary" href="https://cloud.nubenautas.com/registro">
+								<strong>Registro</strong>
+							</a>
+							<a class="button is-light" href="https://cloud.nubenautas.com/">
+								Ingreso
+							</a>
+						</div>
+					</div>
+					<a class="navbar-item" href="https://t.me/nubenautas" target="_blank"><img src="/img/telegram.svg" width="42px" height="42px"></a>
+				</div>
+			</div>
+		</nav>
+		<section id="api" class="hero is-link mb-4">
+			<div class="hero-body has-text-centered">
+				<p class="title"><img src="/img/link.svg"> Nubenautas API</p>
+				<p class="subtitle">
+					Integra nuestros servicios con los tuyos.
+				</p>
+			</div>
+		</section>
+		<div class="container is-fluid">
+      <div class="columns">
+				<div class="column is-1">
+					<aside class="menu" id="api-menu">
+						<p class="menu-label">
+							API menu
+						</p>
+						<ul class="menu-list">
+							<li><a href="#auth">Auth</a></li>
+							<li><a href="#dns">DNS</a></li>
+							<li><a href="#tools">Tools</a></li>
+						</ul>
+					</aside>
+				</div>
+        <div class="column content" id="api-docs">
+          <div class="container is-fluid">
+						<b>BaseURL:</b> <code>https://cloud.nubenautas.com/api</code><br>
+						<b>Request Header:</b> <code>authorization: Bearer [token]</code> except for <code>/sign_in</code>
+						<section id="auth" class="hero is-info my-3">
+							<div class="hero-body">
+								<p class="title">
+									Authentication
+								</p>
+							</div>
+						</section>
+						<div class="columns">
+							<div class="column">
+								<h2>POST <code>/sign_in</code></h2>
+								<br>
+								<b>Request URL parameters</b><br>
+								<code>email=[string]</code><br>
+								<code>password=[string]</code><br>
+								<br>
+								<b>Response</b><br>
+								Code <code>200</code><br>
+								Header <code>token</code><br>
+								<br>
+								<b>Example</b><br>
+								<code>curl -i -X POST -d 'email=[..]&password=[..]' https://cloud.nubenautas.com/api/sign_in</code><br>
+<pre>
+HTTP/2 <b>200</b>
+server: nginx/1.18.0
+date: Tue, 16 Feb 2021 19:02:08 GMT
+content-type: application/json
+content-length: 84
+authorization: Bearer <b>[token]</b>
+x-content-type-options: nosniff
+
+{"id":"[..]","email":"[..]","firstname":"[..]","lastname":"[..]"}
+</pre>
+							</div>
+							<div class="column">
+								<h2>DELETE <code>/sign_out</code></h2>
+								<br>
+								<b>Response</b><br>
+								Code <code>200</code><br>
+								<br>
+								<b>Example</b><br>
+								<code>curl -i -X DELETE -H 'authorization: Bearer [token]' https://cloud.nubenautas.com/api/sign_out</code><br>
+<pre>
+HTTP/2 <b>200</b>
+server: nginx/1.18.0
+date: Tue, 16 Feb 2021 20:28:06 GMT
+content-type: application/json
+content-length: 4
+x-content-type-options: nosniff
+
+<b>true</b>
+</pre>
+							</div>
+						</div>
+						<section id="dns" class="hero is-info my-3">
+							<div class="hero-body">
+								<p class="title">
+									DNS
+								</p>
+							</div>
+						</section>
+						<h2>GET <code>/dns/[domain_name]/records</code></h2>
+						<br>
+						<b>Response</b><br>
+						Code <code>200</code><br>
+						<br>
+						<b>Example</b><br>
+<pre>
+[
+	{
+		"id": 20142611,
+		"content": "127.0.0.1",
+		"created_at": "2020-10-25T22:23:09Z",
+		"domain_id": "sentidocomun.ninja",
+		"name": "",
+		"prio": null,
+		"ttl": 3600,
+		"type": "A"
+	},
+	{
+		"id": 22545628,
+		"content": "127.0.0.1",
+		"created_at": "2020-10-25T22:23:14Z",
+		"domain_id": "sentidocomun.ninja",
+		"name": "www",
+		"prio": null,
+		"ttl": 3600,
+		"type": "A"
+	}
+]
+</pre>
+						<h2>POST <code>/dns/[domain_name]/records</code></h2>
+						<br>
+						<b>Request</b><br>
+						<code>type=[string]</code><br>
+						<code>name=[string]</code><br>
+						<code>content=[string]</code><br>
+						<i>Optional</i><br>
+						<code>ttl=[string]</code><br>
+						<code>prio=[string]</code><br>
+						<br>
+						<b>Response</b><br>
+						Code <code>200</code><br>
+						<br>
+						<b>Example</b><br>
+<pre>
+{
+	"id": 20245620,
+	"content": "127.0.0.1",
+	"created_at": "2020-10-25T22:23:14Z",
+	"domain_id": "sentidocomun.ninja",
+	"name": "test",
+	"prio": null,
+	"ttl": 3600,
+	"type": "A"
+}
+</pre>
+						<h2>PUT <code>/dns/[domain_name]/records/[record_id]</code></h2>
+						<br>
+						<b>Request</b><br>
+						<code>type=[string]</code><br>
+						<code>name=[string]</code><br>
+						<code>content=[string]</code><br>
+						<i>Optional</i><br>
+						<code>ttl=[string]</code><br>
+						<code>prio=[string]</code><br>
+						<br>
+						<b>Response</b><br>
+						Code <code>200</code><br>
+						<br>
+						<b>Example</b><br>
+<pre>
+{
+	"id": 20245620,
+	"content": "127.0.0.1",
+	"created_at": "2020-10-25T22:23:14Z",
+	"domain_id": "sentidocomun.ninja",
+	"name": "test",
+	"prio": null,
+	"ttl": 3600,
+	"type": "A"
+}
+</pre>
+						<h2>DELETE <code>/dns/[domain_name]/records/[record_id]</code></h2>
+						<br>
+						<b>Response</b><br>
+						Code <code>200</code><br>
+						<br>
+						<section id="tools" class="hero is-info my-3">
+							<div class="hero-body">
+								<p class="title">
+									Tools
+								</p>
+							</div>
+						</section>
+						<h2>GET <code>http://ip.nubenautas.net</code> for current public IP</h2>
+<pre>
+curl http://ip.nubenautas.net
+187.225.224.88
+</pre>
+          </div>
+        </div>
+      </div>
+    </div>
+	</body>
+</html>
