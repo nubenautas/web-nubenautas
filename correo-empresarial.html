@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+    <title bind="title">Nubenautas</title>
+    <link rel="icon" href="/img/nubenautas.svg">
+		<link rel="stylesheet" href="/css/bulma.min.css?v=0.9.1">
+		<style>
+			body.has-navbar-fixed-top { padding-top: 5rem }
+			.navbar-item img { max-height: 4em }
+			.table td, th { text-align: right !important; }
+			.table td:first-child, th:first-child { text-align: left !important; }
+		</style>
+		<script>
+			document.addEventListener('DOMContentLoaded', () => {
+				const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
+				if ($navbarBurgers.length > 0) {
+					$navbarBurgers.forEach( el => {
+						el.addEventListener('click', () => {
+							const target = el.dataset.target;
+							const $target = document.getElementById(target);
+							el.classList.toggle('is-active');
+							$target.classList.toggle('is-active');
+						});
+					});
+				}
+			});
+		</script>
+  </head>
+  <body class="has-navbar-fixed-top">
+		<nav class="navbar is-fixed-top is-dark" role="navigation" aria-label="main navigation">
+			<div class="navbar-brand">
+				<a class="navbar-item" href="/"><img src="/img/nubenautas.svg"></a>
+				<a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navMenu">
+					<span aria-hidden="true"></span>
+					<span aria-hidden="true"></span>
+					<span aria-hidden="true"></span>
+				</a>
+			</div>
+			<div id="navMenu" class="navbar-menu">
+				<div class="navbar-start">
+					<div class="navbar-item has-dropdown is-hoverable"><a class="navbar-link">Servicios</a>
+						<div class="navbar-dropdown">
+							<a class="navbar-item" href="/dominios">Registro de Dominios</a>
+							<a class="navbar-item" href="/dns">Anycast DNS</a>
+							<a class="navbar-item" href="/ssl">Certificados SSL</a>
+							<a class="navbar-item" href="#">Correo Empresarial</a>
+							<a class="navbar-item" href="/wordpress">WordPress</a>
+							<a class="navbar-item" href="/hosting-compartido">Web Hosting</a>
+							<a class="navbar-item" href="/servidores-virtuales">Servidores Virtuales</a>
+						</div>
+					</div>
+					<div class="navbar-item has-dropdown is-hoverable"><a class="navbar-link">Soluciones</a>
+						<div class="navbar-dropdown">
+							<a class="navbar-item" href="/administracion">Servicios Administrados</a>
+							<a class="navbar-item" href="/desarrollo">Desarrollo Web</a>
+							<a class="navbar-item" href="/api">Nubenautas API</a>
+						</div>
+					</div>
+				</div>
+				<div class="navbar-end">
+					<div class="navbar-item">
+						<div class="buttons">
+							<a class="button is-primary" href="https://cloud.nubenautas.com/registro">
+								<strong>Registro</strong>
+							</a>
+							<a class="button is-light" href="https://cloud.nubenautas.com/">
+								Ingreso
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</nav>
+		<section id="correo-empresarial" class="hero is-info is-medium mb-4">
+			<div class="hero-body has-text-centered">
+				<p class="title"><img src="/img/email.svg"> Correo Empresarial</p>
+				<p class="subtitle">Solución de correo empresarial totalmente administrada con <b>15GB</b> de almacenamiento por cuenta, expandible.</p>
+			</div>
+		</section>
+		<div class="container is-fullhd">
+			<div class="tile is-ancestor">
+				<div class="tile is-vertical is-8">
+					<div class="tile">
+						<div class="tile is-parent">
+							<article class="tile is-child box">
+								<p class="title">Almacenamiento Flexible</p>
+								<p class="subtitle">
+									Cada buzón inicia con <strong>15GB</strong> y puedes aumentar fácilmente en bloques de <strong>+5GB</strong> según necesites. Sin limitaciones, sin actualizaciones forzadas.
+								</p>
+							</article>
+						</div>
+					</div>
+					<div class="tile">
+						<div class="tile is-parent">
+							<article class="tile is-child box">
+								<p class="title">Cero Gestión Operativa</p>
+								<p class="subtitle">Nosotros manejamos todo: servidores, reputación de IP, respaldos y seguridad en centros de datos europeos de Google Cloud para almacenamiento y Amazon Web Services para envío. <strong>Disponibilidad 99.9%</strong> garantizada y cumplimiento total con GDPR/NIS2.</p>
+							</article>
+						</div>
+					</div>
+					<div class="tile">
+						<div class="tile is-parent">
+							<article class="tile is-child box">
+								<p class="title">Archivos Adjuntos Grandes</p>
+								<p class="subtitle">Límite de <strong>50MB</strong> por adjunto - uno de los más grandes del mercado. Envía más sin comprimir o herramientas de terceros.</p>
+							</article>
+						</div>
+						<div class="tile is-parent">
+							<article class="tile is-child box">
+								<p class="title">Migración Sencilla</p>
+								<p class="subtitle">Migra desde Gmail, Outlook o sistemas legacy en minutos con nuestra herramienta automatizada de migración sin tiempo de inactividad.</p>
+							</article>
+						</div>
+					</div>
+					<div class="tile is-parent">
+						<article class="tile is-child box">
+							<p class="title">Servicio de Correo Empresarial</p>
+							<div class="content">
+								<div>✓ <strong>Calendario y Contactos:</strong> Gestión integrada de agenda y contactos para colaboración sin fricciones</div>
+								<div>✓ <strong>Cumplimiento GDPR/NIS2:</strong> Totalmente compatible con estándares europeos de seguridad y privacidad</div>
+								<div>✓ <strong>27 Idiomas:</strong> Solución global disponible en múltiples idiomas</div>
+								<div>✓ <strong>Soporte 24/7:</strong> Asistencia experta siempre disponible</div>
+								<div>✓ <strong>Protección Spam & Antivirus:</strong> Filtrado incorporado que mantiene los buzones limpios</div>
+								<div>✓ <strong>Autenticación de Dos Factores (2FA):</strong> Capa extra de seguridad</div>
+								<div>✓ <strong>Sincronización Móvil Automática:</strong> Productividad en cualquier dispositivo</div>
+								<div>✓ <strong>Integración Fácil:</strong> Compatible con Outlook, Apple Mail, Thunderbird</div>
+								<div>✓ <strong>Asistencia en Migración:</strong> Soporte experto para migraciones masivas y complejas</div>
+								<div>✓ <strong>Infraestructura Google Cloud y Amazon Web Services:</strong> Centros de datos europeos de primer nivel</div>
+								<div>✓ <strong>Disponibilidad 99.9%:</strong> Garantía de servicio confiable</div>
+								<div>✓ <strong>Copias de Seguridad Automáticas:</strong> Tus datos siempre protegidos</div>
+								<div>✓ <strong>Activación Inmediata:</strong> Empieza a trabajar de inmediato</div>
+								<div>✓ <strong>Sin Publicidad:</strong> Experiencia profesional limpia</div>
+							</div>
+						</article>
+					</div>
+				</div>
+				<div class="tile is-vertical">
+					<div class="tile is-parent">
+						<article class="tile is-child box">
+							<p class="title">Precios</p>
+							<p class="subtitle">Planes simples y transparentes [USD]</p>
+							<table class="table is-striped is-fullwidth">
+								<thead>
+									<tr>
+										<th>Concepto</th>
+										<th>Mensual</th>
+										<th>Anual</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>Cuenta de correo<br><small>(15GB incluidos)</small></td>
+										<td>$1.20</td>
+										<td>$13.20</td>
+									</tr>
+									<tr>
+										<td>Bloque 5GB extra</td>
+										<td>$0.50</td>
+										<td>$5.50</td>
+									</tr>
+								</tbody>
+							</table>
+						</article>
+					</div>
+					<div class="tile is-parent">
+						<article class="tile is-child box">
+							<p class="title">Sin Cuotas de Direcciones</p>
+							<p class="subtitle">
+								Agrega 100 dominios y solo un buzón si quieres - solo pagas por los buzones que realmente usas.
+							</p>
+						</article>
+					</div>
+					<div class="tile is-parent">
+						<article class="tile is-child box">
+							<p class="title">Alias Ilimitados</p>
+							<p class="subtitle">Crea múltiples identidades bajo un buzón para equipos, campañas o proyectos - sin costo extra.</p>
+						</article>
+					</div>
+					<div class="tile is-parent">
+						<article class="tile is-child box">
+							<p class="title">Buzones Compartidos</p>
+							<p class="subtitle">Permite a los equipos colaborar fácilmente en buzones compartidos como ventas@ o soporte@ sin perder visibilidad o control.</p>
+						</article>
+					</div>
+				</div>
+			</div>
+		</div>
+		</div>
+	</body>
+</html>
