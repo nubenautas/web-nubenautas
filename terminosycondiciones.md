@@ -9,6 +9,7 @@ Nubenautas centraliza y facilita el acceso a diversos servicios de infraestructu
 
 - Registro y gestión de dominios
 - Servicios de DNS
+- Correo electrónico empresarial
 - Certificados SSL
 - Hosting compartido
 - Servidores virtuales
@@ -32,6 +33,10 @@ Algunos servicios son provistos por terceros especializados. Al contratarlos, us
 
 - **cPanel** - Hosting compartido  
   [Términos](https://www.cpanel.net/legal-notices/)
+
+El correo electrónico empresarial es operado directamente por Nubenautas.
+
+La vigencia máxima de los certificados SSL está sujeta a las políticas de Sectigo y del CA/Browser Forum.
 
 ## Responsabilidades del cliente
 
